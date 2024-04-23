@@ -7,7 +7,7 @@ namespace Staris.Shared.Components.Code.People;
 public class IndexPeople: ComponentBaseGeneric<List<CharacterViewModel>>
 {
     [Inject]
-    public IPeopleService _service { get; set; }
+    public IPeopleService _service { get; set; } = null!;
 
     protected override async Task OnInitializedAsync()
     {

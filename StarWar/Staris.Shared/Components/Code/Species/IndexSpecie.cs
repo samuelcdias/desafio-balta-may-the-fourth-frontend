@@ -2,28 +2,26 @@
 using Staris.Shared.Services.Interfaces;
 using Staris.Shared.ViewModel;
 
-namespace Staris.Shared.Components.Code.Movies;
+namespace Staris.Shared.Components.Code.Species;
 
-public class IndexFilm: ComponentBaseGeneric<List<MovieViewModel>>
+public class IndexSpecie: ComponentBaseGeneric<List<SpecieViewModel>>
 {
     [Inject]
-    public IMovieService _service { get; set; } = null!;
+    public ISpecieService _service { get; set; } = null!;
 
     protected override async Task OnInitializedAsync()
     {
-        Model = new();
         IsDone = false;
         try
         {
             Model = await _service.GetList();
             IsDone = true;
         }
-        catch(Exception ex)
+        catch (Exception ex)
         {
-            //Apenas para o debug
-            _= ex.Message;
+            //Apenas para debug
+            _ = ex.Message;
         }
     }
-
 
 }

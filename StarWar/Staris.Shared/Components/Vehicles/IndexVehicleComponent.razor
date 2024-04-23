@@ -1,0 +1,24 @@
+﻿@using Staris.Shared.Components.Code.Vehicles
+@inherits IndexVehicle
+
+<h1>Lista de Veículos</h1>
+
+@if(Model is not null)
+{
+    <ul>
+        @if(IsDone)
+        {
+            @foreach(var v in Model)
+            {
+                <li>Veículo:@v.Name  -  Modelo: @v.Model</li>
+            }
+        }
+    </ul>
+}
+else
+{
+    <div>
+        .....Carregando
+    </div>
+}
+

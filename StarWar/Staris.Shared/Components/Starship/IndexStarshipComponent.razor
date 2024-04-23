@@ -2,11 +2,21 @@
 @inherits IndexStarShip
 
 <h1>Lista de Naves</h1>
-
-<ul>
-    @foreach(var m in Model)
-    {
-        <li>@m.Name</li>
-    }
-</ul>
-
+@if(IsDone)
+{
+    <ul>
+        @(Model is not null)
+        {
+            @foreach(var m in Model)
+            {
+                <li>@m.Name</li>
+            }
+        }
+    </ul>
+}
+else
+{
+    <div>
+        ....Carregando
+    </div>
+}

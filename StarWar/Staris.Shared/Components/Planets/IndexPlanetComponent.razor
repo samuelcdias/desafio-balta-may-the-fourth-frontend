@@ -1,0 +1,20 @@
+﻿@using Staris.Shared.Components.Code.Planets
+@inherits IndexPlanet
+
+<h1>Lista de Planetas</h1>
+
+@if(Model is not null)
+{
+    <ul>
+        @foreach(var m in Model)
+        {
+            <li>Planeta: @m.Name - Clima:@m.Climate - População:@m.Population</li>    
+        }
+    </ul>
+}
+else
+{
+    <div>
+        ...Carregando
+    </div>
+}

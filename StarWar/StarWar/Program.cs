@@ -15,6 +15,9 @@ builder.Services.TryAddTransient(sp => new HttpClient
 builder.Services.AddScoped<IMovieService, MovieService>();
 builder.Services.AddScoped<IPeopleService, PeopleService>();
 builder.Services.AddScoped<IStarshipService, StarshipService>();
+builder.Services.AddScoped<IVehicleService, VehicleService>();
+builder.Services.AddScoped<ISpecieService, SpecieService>();
+builder.Services.AddScoped<IPlanetService, PlanetService>();
 
 await builder.Build().RunAsync();
 

@@ -1,13 +1,26 @@
 ﻿@inherits IndexFilm
 
-<h1>Lista de Filmes</h1>
-
-<ul>
-
-@foreach(var item in Model)
+@if (Model is not null)
 {
-    <li>@item.Title</li>
-}
+    <h1>Lista de Filmes - QTD:@Model?.Count ?? 0</h1>
 
-</ul>
+     @if (IsDone)
+     {
+        <ul>
+        
+            @foreach(var item in Model)
+            {
+                <li>@item.Title</li>
+            }
+        
+   
+        </ul>
+     }
+     else
+     {
+        <div>
+            ...Carregando
+        </div>
+     }
+}
 

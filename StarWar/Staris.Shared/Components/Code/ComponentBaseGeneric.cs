@@ -3,7 +3,7 @@ using System.Net.Http.Headers;
 
 namespace Staris.Shared.Components.Code;
 
-public class ComponentBaseGeneric<T>: ComponentBase where T : class, new()
+public class ComponentBaseGeneric<T>: ComponentBase 
 {
     [Parameter]
     public T Model { get; set; }
