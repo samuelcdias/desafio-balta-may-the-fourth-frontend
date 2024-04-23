@@ -1,0 +1,32 @@
+﻿@inherits Film
+
+
+<section class="dt1" >
+    <h1>@Model.Title</h1>
+    <label>Eposódio: @Model.Episode</label><br />
+    <label>Diretor: @Model.Director</label> <br />
+    <label>Produtor: @Model.Producer</label>    <br />
+</section>
+
+@if (IsDoneCharacters)
+{
+    <section class="dt1">
+        <h3>Personagens do Filme</h3>
+        <ul>
+            
+       
+        @foreach (var item in Model.CharactersVM)
+        {
+            <li>@item.Name</li>
+        }
+        </ul>
+    </section>
+}
+
+@if(!string.IsNullOrEmpty(Erro))
+{
+    <p>@Erro</p>
+}
+
+
+

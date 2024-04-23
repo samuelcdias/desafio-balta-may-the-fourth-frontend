@@ -1,0 +1,12 @@
+﻿@using Staris.Shared.Components.Code.StarShip
+@inherits IndexStarShip
+
+<h1>Lista de Naves</h1>
+
+<ul>
+    @foreach(var m in Model)
+    {
+        <li>@m.Name</li>
+    }
+</ul>
+

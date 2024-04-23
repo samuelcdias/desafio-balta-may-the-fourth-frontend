@@ -1,5 +1,4 @@
-﻿namespace StarWars.ViewModel
-{
+﻿namespace Staris.Shared.ViewModel;
     public class PlanetViewModel: ViewModelBase
     {
         public string? Name { get; set; }
@@ -15,4 +14,4 @@
         public List<MovieViewModel>? Movies { get; set; }
     }
 
-}
+

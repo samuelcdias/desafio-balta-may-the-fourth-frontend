@@ -1,0 +1,33 @@
+﻿@page "/starships"
+@inject IStarshipService _service
+
+@if (IsDone)
+{
+    <IndexStarshipComponent  Model="Starships"/>
+}
+else
+{
+    <p>Carregando...</p>
+}
+
+
+@code {
+    public List<StarshipViewModel>? Starships { get; set; }
+    public bool IsDone { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        IsDone = false;
+        await Task.Delay(500);
+        try
+        {
+            Starships = await _service.GetList();
+            IsDone = true;
+        }
+        catch
+        {
+            
+        }
+    }
+
+}

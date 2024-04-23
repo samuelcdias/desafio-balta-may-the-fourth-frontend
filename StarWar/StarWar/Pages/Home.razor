@@ -1,7 +1,52 @@
 ﻿@page "/"
+@inject HttpClient _client
+
+
 
 <PageTitle>Home</PageTitle>
 
 <h1>Hello, world!</h1>
+<label>Caminho para MOCK-API</label>
+<InputText @bind-Value="UriMock" />
 
-Welcome to your new app.
+
+@code{
+    public string Erro { get; set; }
+    public List<MovieViewModel> Movies { get; set; } = new();
+    public string UriMock { 
+        get { return Configuration.BaseUri; }
+        set
+        {
+            Configuration.BaseUri = value;
+        } 
+    }
+
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        // try
+        // {
+
+
+        //     var resposta = await _client.GetAsync("https://swapi.dev/api/films/1");
+        //     if (resposta.IsSuccessStatusCode)
+        //     {
+        //         var xpt = await resposta.Content.ReadAsStringAsync();
+        //         var xp1t = await resposta.Content.ReadFromJsonAsync<FilmVM>();
+        //     }
+
+            // var resposta = await _client.GetAsync("https://swapi.dev/api/films/");
+            // if (resposta.IsSuccessStatusCode)
+            // {
+            //     Movies = await resposta.Content.ReadFromJsonAsync<List<MovieViewModel>>();
+            // }
+
+        // }
+        // catch(Exception ex)
+        // {
+        //     Erro = ex.Message;
+        // }
+    }
+
+}

@@ -1,0 +1,17 @@
+﻿@using Staris.Shared.Components.Code.People
+@inherits IndexPeople
+
+
+
+
+
+<h1>Personagens</h1>
+
+<ul>
+    @foreach(var p in Model)
+    {
+        <li>
+            Nome:@p.Name  Nacimento:@p.BirthYear  Genero: @p.Gender
+        </li>
+    }
+</ul>
