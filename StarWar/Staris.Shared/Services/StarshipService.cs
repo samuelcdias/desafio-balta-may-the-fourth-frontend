@@ -19,12 +19,12 @@ public class StarshipService : IStarshipService
     public async Task<List<StarshipViewModel>> GetList()
     {
         var starShips = await _client.GetFromJsonAsync<ResultViewModel<StarshipViewModel>>(_endPoint);
-        return starShips != null ? starShips.Results : [];
+        return starShips?.Results ?? [];
     }
     public async Task<StarshipViewModel> GetById(int Id)
     {
         var starship = await _client.GetFromJsonAsync<StarshipViewModel>(_endPoint + Id);
-        return starship != null ? starship : new();
+        return starship ?? new();
     }
     public Task Create()
     {

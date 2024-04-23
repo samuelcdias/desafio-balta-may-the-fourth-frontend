@@ -26,7 +26,7 @@ public sealed class CharacterViewModel : ViewModelBase
     public PlanetViewModel? HomeworldVM { get; set; }
     public List<string>? Films { get; set; }
     public List<MovieViewModel>? Movies { get; set; }
-    public List<String>? Vehicles { get; set; }
+    public List<string>? Vehicles { get; set; }
     public List<VehicleViewModel>? VehiclesList { get; set; }
     public List<string>? Starships { get; set; }
     public List<StarshipViewModel>? StarshipsList { get; set; }

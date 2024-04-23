@@ -1,35 +1,3 @@
 ﻿@page "/people"
-@inject IPeopleService _service
-
-
-@if (IsDone)
-{
-    <IndexPeopleComponent Model="People" />
-}
-else
-{
-    <p>Carregando...</p>
-}
-
-
-
-@code {
-    public List<CharacterViewModel> People { get; set; } = [];
-    public bool IsDone { get; set; } = false;
-    public string Erro { get; set; } = "";
-    protected override async Task OnInitializedAsync()
-    {
-        IsDone = false;
-        await Task.Delay(500);
-        try
-        {
-            People = await _service.GetList();
-            IsDone = true;
-        }
-        catch(Exception ex)
-        {
-            Erro = ex.Message;    
-        }
-    }
-
-}
+<PageTitle>People</PageTitle>
+<IndexPeopleComponent />

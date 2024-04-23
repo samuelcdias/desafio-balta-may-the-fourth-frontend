@@ -18,14 +18,14 @@ public class PeopleService : IPeopleService
     public async Task<List<CharacterViewModel>> GetList()
     {
 
-        var Peoples = await _client.GetFromJsonAsync<ResultViewModel<CharacterViewModel>>(_endpoint);
-        return Peoples != null ? Peoples.Results : new();
+        var peoples = await _client.GetFromJsonAsync<ResultViewModel<CharacterViewModel>>(_endpoint);
+        return peoples?.Results ?? [];
     }
 
     public async Task<CharacterViewModel> GetById(int Id)
     {
-        var People = await _client.GetFromJsonAsync<CharacterViewModel>(_endpoint + Id);
-        return People != null ? People : new();
+        var people = await _client.GetFromJsonAsync<CharacterViewModel>(_endpoint + Id);
+        return people ?? new();
     }
 
     public Task Create()
@@ -37,10 +37,6 @@ public class PeopleService : IPeopleService
     {
         throw new NotImplementedException();
     }
-
-    
-
-    
 
     public Task Update()
     {

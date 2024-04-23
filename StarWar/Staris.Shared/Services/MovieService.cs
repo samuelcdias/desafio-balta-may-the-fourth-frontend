@@ -26,13 +26,13 @@ namespace Staris.Shared.Services
         {
             var rep = await _client.GetAsync(Configuration.BaseUri + _endpoint);
             var Result = await rep.Content.ReadFromJsonAsync<ResultViewModel<MovieViewModel>>();
-            return Result != null ? Result.Results : [];
+            return Result?.Results ?? [];
         }
 
         public async Task<MovieViewModel> GetById(int Id)
         {
-            var Movie = await _client.GetFromJsonAsync<MovieViewModel>(_endpoint + Id);
-            return Movie != null ? Movie : new();
+            var movie = await _client.GetFromJsonAsync<MovieViewModel>(_endpoint + Id);
+            return movie ?? new();
         }
 
 
@@ -44,9 +44,7 @@ namespace Staris.Shared.Services
         public Task<MovieViewModel> Delete()
         {
             throw new NotImplementedException();
-        }
-
-        
+        }      
        
 
         public Task<MovieViewModel> Update()

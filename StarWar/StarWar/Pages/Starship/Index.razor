@@ -18,7 +18,6 @@ else
     protected override async Task OnInitializedAsync()
     {
         IsDone = false;
-        await Task.Delay(500);
         try
         {
             Starships = await _service.GetList();

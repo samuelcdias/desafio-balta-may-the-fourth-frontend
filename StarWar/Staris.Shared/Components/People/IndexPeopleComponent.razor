@@ -1,17 +1,27 @@
 ﻿@using Staris.Shared.Components.Code.People
 @inherits IndexPeople
 
-
-
-
-
 <h1>Personagens</h1>
 
+
+@if (IsDone)
+{
 <ul>
-    @foreach(var p in Model)
+    @if (Model is not null)
     {
-        <li>
-            Nome:@p.Name  Nacimento:@p.BirthYear  Genero: @p.Gender
-        </li>
+        @foreach (var p in Model)
+        {
+            <li>
+                Nome:@p.Name  Nacimento:@p.BirthYear  Genero: @p.Gender
+            </li>
+        }
     }
 </ul>
+}
+else
+{
+    <div>
+    ...Carregando
+    </div>
+}
+

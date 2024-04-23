@@ -1,4 +1,6 @@
-﻿namespace Staris.Shared.ViewModel;
+﻿using System.Text.Json.Serialization;
+
+namespace Staris.Shared.ViewModel;
 
 public class VehicleViewModel: ViewModelBase
 {
@@ -12,6 +14,7 @@ public class VehicleViewModel: ViewModelBase
     public string? Passengers { get; set; }
     public string? CargoCapacity { get; set; }
     public string? Consumables { get; set; }
-    public string? _class { get; set; }
+    [JsonPropertyName("_class")]
+    public string? Class { get; set; }
     public List<MovieViewModel>? Movies { get; set; }
 }
