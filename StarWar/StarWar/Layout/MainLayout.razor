@@ -1,13 +1,25 @@
 ﻿@inherits LayoutComponentBase
 <div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+    <header>
+        <div class="logo-wrapper">
+            <img src="assets/logo.svg" width="40" height="40" class="logo" alt="" />
+        </div>
+        <div>
+            <span class="title-header">Suprimentos Táticos e Recursos do Império</span>
+            <span class="title-header mobile">StarIs</span>
+        </div>
+        <div>
+            <a href="https://github.com/VetorPedro/desafio-balta-may-the-fourth-frontend" _target="blank" rel="noopener noreferrer">
+                <img src="assets/github.svg" class="github" width="24" height="24" alt="Veja o repositorio" />
+            </a>
+        </div>
+    </header>
 
     <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+        <div class="sidebar">
+            <NavMenu />
         </div>
+       
 
         <article class="content px-4">
             @Body
