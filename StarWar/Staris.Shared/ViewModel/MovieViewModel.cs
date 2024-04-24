@@ -2,7 +2,7 @@
 
 namespace Staris.Shared.ViewModel;
 
-public sealed class MovieViewModel: ViewModelBase
+public sealed class MovieViewModel : ViewModelBase
 {
     public string? Title { get; set; }
     [JsonPropertyName("Episode_id")]

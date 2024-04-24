@@ -1,7 +1,23 @@
-html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+:root {
+    --white: #fff;
+    --metal: #bfbfbf;
+    --star: #ffcf00;
+    --black: #1e1e1e;
 }
 
+body {
+    font-family: Inter, Helvetica, Arial, sans-serif;
+    background: var(--black);
+}
+
+.cards-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 24px 48px;
+    gap: 32px;
+    max-width: calc(100vw - 205px);
+}
 h1:focus {
     outline: none;
 }

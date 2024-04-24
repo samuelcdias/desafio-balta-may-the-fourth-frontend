@@ -6,15 +6,15 @@
 
      @if (IsDone)
      {
-        <ul>
+        <section class="cards-wrapper">
         
             @foreach(var item in Model)
             {
-                <li>@item.Title</li>
+                <Movie item="@item" />
             }
         
    
-        </ul>
+        </section>
      }
      else
      {

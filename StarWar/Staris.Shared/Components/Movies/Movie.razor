@@ -1,0 +1,31 @@
+﻿<section class="card-film">
+    <div class="image-wrapper">
+        <span class="episode">@item.Episode.ToRoman()</span>
+        <span class="overlay-effect"></span>
+        <span class="lighten-effect"></span>
+        <img src="@GetImage()" alt="@item.Title" loading="eager" />
+    </div>
+    <div class="description-wrapper">
+        <h2 class="title">@item.Title</h2>
+        <p class="description"> Diretor: @item.Director</p>
+        <p class="description"> Produtor: @item.Producer</p>
+        <p class="description"> Data de lançamento: @DateParsed(item.ReleaseDate)</p>
+    </div>
+</section>
+
+@code {
+    [Parameter]
+    public MovieViewModel item { get; set; } = null!;
+    public string DateParsed(string? date) {
+        if(date is null) return "Indefinida";
+        return DateTime.ParseExact(date, "yyyy-MM-dd", null).ToString("dd/MM/yyyy");
+    }
+
+    protected string GetImage()
+    {
+        if (item.Image is not null)
+            return item.Image;
+        return "assets/not-found-movie.png";
+    }
+
+}
