@@ -22,14 +22,16 @@ public sealed class CharacterViewModel : ViewModelBase
     public string? BirthYear { get; set; }
     public string? Gender { get; set; }
 
-    public string? Homeworld { get; set; }
+    public BaseToListViewModel? Homeworld { get; set; }
     public PlanetViewModel? HomeworldVM { get; set; }
-    public List<string>? Films { get; set; }
-    public List<MovieViewModel>? Movies { get; set; }
-    public List<string>? Vehicles { get; set; }
-    public List<VehicleViewModel>? VehiclesList { get; set; }
-    public List<string>? Starships { get; set; }
-    public List<StarshipViewModel>? StarshipsList { get; set; }
+
+    [JsonPropertyName("movies")]
+    public List<BaseToListViewModel>? Films { get; set; }
+    public List<MovieViewModel>? FilmsVM { get; set; }
+    public List<BaseToListViewModel>? Vehicles { get; set; }
+    public List<VehicleViewModel>? VehiclesVM { get; set; }
+    public List<BaseToListViewModel>? Starships { get; set; }
+    public List<StarshipViewModel>? StarshipsVM { get; set; }
     
 
 }

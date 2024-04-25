@@ -14,7 +14,7 @@ public class IndexPeople: ComponentBaseGeneric<List<CharacterViewModel>>
         IsDone = false;
         try
         {
-            Model = await _service.GetList();
+            Model = await _service.GetList("sky",1,6);
             IsDone = true;
         }
         catch(Exception ex)

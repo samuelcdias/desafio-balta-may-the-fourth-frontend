@@ -12,7 +12,7 @@
         @foreach (var p in Model)
         {
             <li>
-                Nome:@p.Name  Nacimento:@p.BirthYear  Genero: @p.Gender
+                Nome:@p.Name  Nacimento:@p.BirthYear  Genero: @p.Gender  <img src="@p.ImageUrl" alt="@p.Name" style="width: 100px" />
             </li>
         }
     }

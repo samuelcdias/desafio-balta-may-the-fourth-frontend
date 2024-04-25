@@ -10,7 +10,7 @@
         
             @foreach(var item in Model)
             {
-                <li>@item.Title</li>
+                <li>@item.Title  - Data Lançamento: @Convert.ToDateTime(item.ReleaseDate).ToString("d") </li> 
             }
         
    
