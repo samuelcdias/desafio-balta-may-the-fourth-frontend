@@ -52,7 +52,7 @@ namespace Staris.Shared.Services
         }
 
 
-        public async Task<MovieViewModel> Create()
+        public Task<MovieViewModel> Create()
         {
             throw new NotImplementedException();
         }

@@ -1,26 +1,26 @@
 ﻿@inherits IndexFilm
 
-@if (Model is not null)
+@if (Model is not null && IsDone)
 {
-    <h1>Lista de Filmes - QTD:@Model?.Count ?? 0</h1>
-
-     @if (IsDone)
-     {
+    <h1>Lista de Filmes - QTD:@Model?.Count</h1>
+    @if(Model?.Count>0)
+    {
         <ul>
         
             @foreach(var item in Model)
             {
-                <li>@item.Title  - Data Lançamento: @Convert.ToDateTime(item.ReleaseDate).ToString("d") </li> 
+                <li>
+                    @item.Title  - Data Lançamento: @Convert.ToDateTime(item.ReleaseDate).ToString("d") 
+                    <a href="/movies/@item.Id">Detais</a>    
+                </li> 
             }
-        
-   
         </ul>
-     }
-     else
-     {
-        <div>
-            ...Carregando
-        </div>
-     }
+    }
+}
+else
+{
+    <div>
+        ...Loading
+    </div>
 }
 

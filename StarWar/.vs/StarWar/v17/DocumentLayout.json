@@ -3,24 +3,8 @@
   "WorkspaceRootPath": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|c:\\cursobalta\\desafios\\desafio-balta-may-the-fourth-frontend\\starwar\\staris.shared\\configurations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|solutionrelative:staris.shared\\configurations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|c:\\cursobalta\\desafios\\desafio-balta-may-the-fourth-frontend\\starwar\\staris.shared\\components\\code\\vehicles\\indexvehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|solutionrelative:staris.shared\\components\\code\\vehicles\\indexvehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|c:\\cursobalta\\desafios\\desafio-balta-may-the-fourth-frontend\\starwar\\staris.shared\\components\\code\\starship\\indexstarship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|solutionrelative:staris.shared\\components\\code\\starship\\indexstarship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|c:\\cursobalta\\desafios\\desafio-balta-may-the-fourth-frontend\\starwar\\staris.shared\\components\\code\\planets\\indexplanet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|solutionrelative:staris.shared\\components\\code\\planets\\indexplanet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|c:\\cursobalta\\desafios\\desafio-balta-may-the-fourth-frontend\\starwar\\staris.shared\\services\\interfaces\\iplanetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|solutionrelative:staris.shared\\services\\interfaces\\iplanetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|c:\\cursobalta\\desafios\\desafio-balta-may-the-fourth-frontend\\starwar\\staris.shared\\viewmodel\\basetolistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|solutionrelative:staris.shared\\viewmodel\\basetolistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 170,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,67 +30,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IndexStarShip.cs",
-              "DocumentMoniker": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\Components\\Code\\StarShip\\IndexStarShip.cs",
-              "RelativeDocumentMoniker": "Staris.Shared\\Components\\Code\\StarShip\\IndexStarShip.cs",
-              "ToolTip": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\Components\\Code\\StarShip\\IndexStarShip.cs",
-              "RelativeToolTip": "Staris.Shared\\Components\\Code\\StarShip\\IndexStarShip.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAuwBIAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T20:41:11.121Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IndexPlanet.cs",
-              "DocumentMoniker": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\Components\\Code\\Planets\\IndexPlanet.cs",
-              "RelativeDocumentMoniker": "Staris.Shared\\Components\\Code\\Planets\\IndexPlanet.cs",
-              "ToolTip": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\Components\\Code\\Planets\\IndexPlanet.cs",
-              "RelativeToolTip": "Staris.Shared\\Components\\Code\\Planets\\IndexPlanet.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAA8wBIAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T18:47:34.831Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IndexVehicle.cs",
-              "DocumentMoniker": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\Components\\Code\\Vehicles\\IndexVehicle.cs",
-              "RelativeDocumentMoniker": "Staris.Shared\\Components\\Code\\Vehicles\\IndexVehicle.cs",
-              "ToolTip": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\Components\\Code\\Vehicles\\IndexVehicle.cs",
-              "RelativeToolTip": "Staris.Shared\\Components\\Code\\Vehicles\\IndexVehicle.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAA8wBQAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T19:58:41.048Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Configuration.cs",
-              "DocumentMoniker": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\Configurations\\Configuration.cs",
-              "RelativeDocumentMoniker": "Staris.Shared\\Configurations\\Configuration.cs",
-              "ToolTip": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\Configurations\\Configuration.cs",
-              "RelativeToolTip": "Staris.Shared\\Configurations\\Configuration.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAtwBEAAAB0AAAA",
+              "Title": "BaseToListViewModel.cs",
+              "DocumentMoniker": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\ViewModel\\BaseToListViewModel.cs",
+              "RelativeDocumentMoniker": "Staris.Shared\\ViewModel\\BaseToListViewModel.cs",
+              "ToolTip": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\ViewModel\\BaseToListViewModel.cs",
+              "RelativeToolTip": "Staris.Shared\\ViewModel\\BaseToListViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T19:41:45.72Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IPlanetService.cs",
-              "DocumentMoniker": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\Services\\Interfaces\\IPlanetService.cs",
-              "RelativeDocumentMoniker": "Staris.Shared\\Services\\Interfaces\\IPlanetService.cs",
-              "ToolTip": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\Services\\Interfaces\\IPlanetService.cs",
-              "RelativeToolTip": "Staris.Shared\\Services\\Interfaces\\IPlanetService.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T20:24:37.98Z",
+              "WhenOpened": "2024-04-26T19:05:28.94Z",
               "EditorCaption": ""
             }
           ]

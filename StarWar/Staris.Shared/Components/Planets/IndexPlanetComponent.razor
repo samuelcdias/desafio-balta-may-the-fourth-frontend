@@ -8,7 +8,8 @@
     <ul>
         @foreach(var m in Model)
         {
-            <li>Planeta: @m.Name - Clima:@m.Climate - População:@m.Population</li>    
+            <li>Planeta: @m.Name - Clima:@m.Climate - População:@m.Population</li>
+            <a href="/planets/@m.Id">Details</a>
         }
     </ul>
 }

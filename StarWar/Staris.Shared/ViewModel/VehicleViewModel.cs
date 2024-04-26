@@ -31,8 +31,8 @@ public class VehicleViewModel: ViewModelBase
     [JsonPropertyName("vehicleClass")]
     public string? Class { get; set; }
     [JsonPropertyName("movies")]
-    public List<BaseToListViewModel>? films { get; set; }
-    public List<MovieViewModel>? filmsVM { get; set; }
+    public List<BaseToListViewModel>? Films { get; set; }
+    public List<MovieViewModel>? FilmsVM { get; set; }
     public List<string>? Pilots { get; set; }
     public List<CharacterViewModel>? PilotsVM { get; set; }
 }

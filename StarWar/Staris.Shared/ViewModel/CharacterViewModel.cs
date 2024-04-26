@@ -18,7 +18,7 @@ public sealed class CharacterViewModel : ViewModelBase
     [JsonPropertyName("eye_color")]
     public string? EyeColor { get; set; }
 
-    [JsonPropertyName("birth_year")]
+    [JsonPropertyName("birthYear")]
     public string? BirthYear { get; set; }
     public string? Gender { get; set; }
 

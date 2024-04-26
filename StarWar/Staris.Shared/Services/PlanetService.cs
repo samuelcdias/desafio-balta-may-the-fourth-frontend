@@ -14,7 +14,7 @@ public class PlanetService : IPlanetService
     {
         _client = client;
         _client.BaseAddress = new Uri(Configuration.BaseUri);
-        _endPoint = "planets";
+        _endPoint = "planets/";
     }
 
     public async Task<List<PlanetViewModel>> GetList()

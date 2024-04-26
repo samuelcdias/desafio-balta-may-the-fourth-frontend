@@ -4,8 +4,12 @@ using Staris.Shared.ViewModel;
 
 namespace Staris.Shared.Components.Code.People;
 
-public class IndexPeople: ComponentBaseGeneric<List<CharacterViewModel>>
+public class DetailPeople : ComponentBaseGeneric<CharacterViewModel>
 {
+    [EditorRequired]
+    [Parameter]
+    public int Id { get; set; }
+
     [Inject]
     public IPeopleService _service { get; set; } = null!;
 
@@ -14,14 +18,11 @@ public class IndexPeople: ComponentBaseGeneric<List<CharacterViewModel>>
         IsDone = false;
         try
         {
-            Model = await _service.GetList(1,30);
-            IsDone = true;
+            Model = await _service.GetById(Id);
+            IsDone = true; 
         }
-        catch(Exception ex)
-        {
-            //apenas para debug
-            _=ex.Message;
-        }
+        catch { }
     }
+
 
 }
