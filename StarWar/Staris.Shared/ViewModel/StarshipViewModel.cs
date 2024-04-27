@@ -10,11 +10,13 @@ public class StarshipViewModel: ViewModelBase
 
     [JsonPropertyName("cost_in_credits")]
     public string? CostInCredits { get; set; }
+    [JsonPropertyName("length")]
     public string? Length { get; set; }
     /// <summary>
     /// The maximum speed of this starship in the atmosphere.
     /// </summary>
-    [JsonPropertyName("max_atmosphering_speed")]
+    //[JsonPropertyName("max_atmosphering_speed")]
+    [JsonPropertyName("maxAtmospheringSpeed")]
     public string? MaxSpeedAtmosphering { get; set; }
     /// <summary>
     /// The number of personnel needed to run or pilot this starship.
@@ -32,8 +34,9 @@ public class StarshipViewModel: ViewModelBase
     public string? HyperdriveRating { get; set; }
 
     /// <summary>
-    /// Velocity - megalight per hour (abbreviated MGLT) was a unit used to measure the relative sublight speed of starships 
+    /// Velocidade - megalight por hora (abreviado MGLT) foi uma unidade usada para medir a velocidade relativa subluz de naves estelares.
     /// </summary>
+    [JsonPropertyName("megalights")]
     public string? Mglt { get; set; } 
     public string? Consumables { get; set; }
 
@@ -41,6 +44,8 @@ public class StarshipViewModel: ViewModelBase
     public string? StarshipClass { get; set; }
     public List<string>? Pilots { get; set; }
     public List<CharacterViewModel>? PilotsVM { get; set; }
-    public List<string>? Films { get; set; }
-    public List<MovieViewModel>? Movies { get; set; }
+
+    [JsonPropertyName("movies")]
+    public List<BaseToListViewModel>? Films { get; set; }
+    public List<MovieViewModel>? FilmsVM { get; set; }
 }

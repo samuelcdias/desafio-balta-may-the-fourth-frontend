@@ -2,6 +2,7 @@
 using Staris.Shared.Services.Interfaces;
 using Staris.Shared.ViewModel;
 using System.Net.Http.Json;
+using System.Web;
 
 namespace Staris.Shared.Services
 {
@@ -11,16 +12,34 @@ namespace Staris.Shared.Services
         private readonly string _endpoint;
         public MovieService(HttpClient client)
         {
-
             _client = client;
             _client.BaseAddress = new Uri(Configuration.BaseUri);
-            _endpoint = "films/";
+            _endpoint = "movies/";
         }
 
         public async Task<List<MovieViewModel>> GetList()
         {
-            var rep = await _client.GetAsync(Configuration.BaseUri + _endpoint);
-            var Result = await rep.Content.ReadFromJsonAsync<ResultViewModel<MovieViewModel>>();
+            var Result = await _client.GetFromJsonAsync<ResultViewModel<MovieViewModel>>(_endpoint);
+            return Result?.Results ?? [];
+        }
+        public async Task<List<MovieViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder)
+        {
+            string parameters = Configuration.BuildPostParameters(search, page, perPage, sortBy, sortOrder);
+            
+            var Result = await _client.GetFromJsonAsync<ResultViewModel<MovieViewModel>>(_endpoint+parameters);
+            return Result?.Results ?? [];
+        }
+        public async Task<List<MovieViewModel>> GetList(string search, int page, int perPage)
+        {
+            string parameters = Configuration.BuildPostParameters(search, page, perPage, "", "");
+
+            var Result = await _client.GetFromJsonAsync<ResultViewModel<MovieViewModel>>(_endpoint + parameters);
+            return Result?.Results ?? [];
+        }
+        public async Task<List<MovieViewModel>> GetList( int page, int perPage)
+        {
+            string parameters = Configuration.BuildPostParameters("", page, perPage, "", "");
+            var Result = await _client.GetFromJsonAsync<ResultViewModel<MovieViewModel>>(_endpoint + parameters);
             return Result?.Results ?? [];
         }
 

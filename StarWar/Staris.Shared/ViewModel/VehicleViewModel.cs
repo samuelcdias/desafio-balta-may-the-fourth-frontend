@@ -12,23 +12,27 @@ public class VehicleViewModel: ViewModelBase
     /// </summary>
     [JsonPropertyName("cost_in_credits")]
     public string? CostInCredits { get; set; }
+
+    [JsonPropertyName("lenght")]
     public string? Length { get; set; }
     /// <summary>
     /// Velocidade Máxima em Atmosfera
     /// </summary>
-    [JsonPropertyName("max_atmosphering_speed")]
+    //[JsonPropertyName("max_atmosphering_speed")]
+    [JsonPropertyName("maxAtmospheringSpeed")]
     public string? MaxSpeedAtmosphering { get; set; }
     public string? Crew { get; set; }
     public string? Passengers { get; set; }
 
-    [JsonPropertyName("cargo_capacity")]
+    [JsonPropertyName("cargoCapacity")]
     public string? CargoCapacity { get; set; }
     public string? Consumables { get; set; }
 
-    [JsonPropertyName("_class")]
+    [JsonPropertyName("vehicleClass")]
     public string? Class { get; set; }
-    public List<string>? films { get; set; }
-    public List<MovieViewModel>? Movies { get; set; }
+    [JsonPropertyName("movies")]
+    public List<BaseToListViewModel>? films { get; set; }
+    public List<MovieViewModel>? filmsVM { get; set; }
     public List<string>? Pilots { get; set; }
     public List<CharacterViewModel>? PilotsVM { get; set; }
 }

@@ -9,6 +9,10 @@ public interface IStarshipService
     /// </summary>
     /// <returns></returns>
     public Task<List<StarshipViewModel>> GetList();
+    public Task<List<StarshipViewModel>> GetList(int page, int perPage);
+    public Task<List<StarshipViewModel>> GetList(string search, int page, int perPage);
+    public Task<List<StarshipViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder);
+
     /// <summary>
     /// Retorna Nave pelo ID
     /// </summary>

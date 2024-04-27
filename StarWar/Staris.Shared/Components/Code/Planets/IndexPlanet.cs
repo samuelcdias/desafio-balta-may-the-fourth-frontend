@@ -14,7 +14,7 @@ public class IndexPlanet: ComponentBaseGeneric<List<PlanetViewModel>>
         IsDone = false;
         try
         {
-            Model = await _service.GetList();
+            Model = await _service.GetList(1,6);
             IsDone = true;
         }
         catch (Exception ex) 

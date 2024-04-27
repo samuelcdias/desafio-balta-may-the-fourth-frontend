@@ -8,6 +8,11 @@ public interface IMovieService
     /// </summary>
     /// <returns></returns>
     public Task<List<MovieViewModel>> GetList();
+    public Task<List<MovieViewModel>> GetList(int page, int perPage);
+    public Task<List<MovieViewModel>> GetList(string search, int page, int perPage);
+    public Task<List<MovieViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder);
+    
+
     /// <summary>
     /// Retorna único Filme pelo código
     /// </summary>

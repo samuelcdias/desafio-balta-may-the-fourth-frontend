@@ -14,6 +14,9 @@ namespace Staris.Shared.Services.Interfaces
         /// </summary>
         /// <returns></returns>
         public Task<List<VehicleViewModel>> GetList();
+        public Task<List<VehicleViewModel>> GetList(int page, int perPagesortOrder);
+        public Task<List<VehicleViewModel>> GetList(string search, int page, int perPage);
+        public Task<List<VehicleViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder);
         /// <summary>
         /// Retorna Veiculo pelo Id
         /// </summary>

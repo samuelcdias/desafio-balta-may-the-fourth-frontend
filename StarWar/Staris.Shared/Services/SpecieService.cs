@@ -22,6 +22,24 @@ public class SpecieService : ISpecieService
         var resultBase = await _client.GetFromJsonAsync<ResultViewModel<SpecieViewModel>>(_endPoint);
         return resultBase?.Results ?? [];
     }
+    public async Task<List<SpecieViewModel>> GetList(int page, int perPage)
+    {
+        string parameters = Configuration.BuildPostParameters("", page, perPage,"","");
+        var resultBase = await _client.GetFromJsonAsync<ResultViewModel<SpecieViewModel>>(_endPoint + parameters);
+        return resultBase?.Results ?? [];
+    }
+    public async Task<List<SpecieViewModel>> GetList(string search, int page, int perPage)
+    {
+        string parameters = Configuration.BuildPostParameters(search, page, perPage,"","");
+        var resultBase = await _client.GetFromJsonAsync<ResultViewModel<SpecieViewModel>>(_endPoint + parameters);
+        return resultBase?.Results ?? [];
+    }
+    public async Task<List<SpecieViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder)
+    {
+        string parameters = Configuration.BuildPostParameters(search, page, perPage, sortBy, sortOrder);
+        var resultBase = await _client.GetFromJsonAsync<ResultViewModel<SpecieViewModel>>(_endPoint + parameters);
+        return resultBase?.Results ?? [];
+    }
 
     public async Task<SpecieViewModel> GetById(int Id)
     {

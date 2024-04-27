@@ -9,6 +9,10 @@ public interface IPlanetService
     /// </summary>
     /// <returns></returns>
     public Task<List<PlanetViewModel>> GetList();
+    public Task<List<PlanetViewModel>> GetList(int page, int perPage);
+    public Task<List<PlanetViewModel>> GetList(string search, int page, int perPage);
+    public Task<List<PlanetViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder);
+    /// <summary>
     /// <summary>
     /// Retorna Planeta pelo Id
     /// </summary>

@@ -9,6 +9,9 @@ public interface ISpecieService
     /// </summary>
     /// <returns></returns>
     public Task<List<SpecieViewModel>> GetList();
+    public Task<List<SpecieViewModel>> GetList(int page, int perPage);
+    public Task<List<SpecieViewModel>> GetList(string search, int page, int perPage);
+    public Task<List<SpecieViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder);
     /// <summary>
     /// Retorna Specie pelo Id
     /// </summary>

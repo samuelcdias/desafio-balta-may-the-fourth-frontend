@@ -15,7 +15,7 @@ public class IndexFilm: ComponentBaseGeneric<List<MovieViewModel>>
         IsDone = false;
         try
         {
-            Model = await _service.GetList();
+            Model = await _service.GetList(1,6);
             IsDone = true;
         }
         catch(Exception ex)

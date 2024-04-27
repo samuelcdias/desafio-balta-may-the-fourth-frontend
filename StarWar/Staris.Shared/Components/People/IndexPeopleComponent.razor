@@ -9,12 +9,15 @@
 <ul>
     @if (Model is not null)
     {
+        <section class="cards-wrapper">
+
         @foreach (var p in Model)
         {
             <li>
-                Nome:@p.Name  Nacimento:@p.BirthYear  Genero: @p.Gender
+                Nome:@p.Name  Nacimento:@p.BirthYear  Genero: @p.Gender  <img src="@p.ImageUrl" alt="@p.Name" style="width: 100px" />
             </li>
         }
+        </section>
     }
 </ul>
 }

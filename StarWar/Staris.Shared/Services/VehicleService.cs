@@ -14,7 +14,7 @@ public class VehicleService : IVehicleService
     {
         _client = client;
         _client.BaseAddress = new Uri(Configuration.BaseUri);
-        _endPoint = "vehicles/";
+        _endPoint = "vehicless/";
     }
 
     public async Task<List<VehicleViewModel>> GetList()
@@ -23,6 +23,25 @@ public class VehicleService : IVehicleService
         return resultBase?.Results ?? [];
 
     }
+    public async Task<List<VehicleViewModel>> GetList(int page, int perPage)
+    {
+        string parameters = Configuration.BuildPostParameters("", page, perPage, "", "");
+        var resultBase = await _client.GetFromJsonAsync<ResultViewModel<VehicleViewModel>>(_endPoint + parameters);
+        return resultBase?.Results ?? [];
+    }
+    public async Task<List<VehicleViewModel>> GetList(string search, int page, int perPage)
+    {
+        string parameters = Configuration.BuildPostParameters(search, page, perPage, "", "");
+        var resultBase = await _client.GetFromJsonAsync<ResultViewModel<VehicleViewModel>>(_endPoint + parameters);
+        return resultBase?.Results ?? [];
+    }
+    public async Task<List<VehicleViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder)
+    {
+        string parameters = Configuration.BuildPostParameters(search, page, perPage, sortBy, sortOrder);
+        var resultBase = await _client.GetFromJsonAsync<ResultViewModel<VehicleViewModel>>(_endPoint + parameters);
+        return resultBase?.Results ?? [];
+    }
+    
     public async Task<VehicleViewModel> GetById(int id)
     {
         var vehicle = await _client.GetFromJsonAsync<VehicleViewModel>(_endPoint + id);
