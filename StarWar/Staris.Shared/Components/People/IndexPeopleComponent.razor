@@ -9,6 +9,8 @@
 <ul>
     @if (Model is not null)
     {
+        <section class="cards-wrapper">
+
         @foreach (var p in Model)
         {
             <li>
@@ -16,6 +18,7 @@
                 <a href="/people/@p.Id">Detais</a>
             </li>
         }
+        </section>
     }
 </ul>
 }

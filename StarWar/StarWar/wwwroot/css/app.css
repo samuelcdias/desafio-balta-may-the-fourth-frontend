@@ -1,7 +1,30 @@
-html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+:root {
+    --white: #fff;
+    --metal: #bfbfbf;
+    --star: #ffcf00;
+    --black: #1e1e1e;
 }
 
+body {
+    font-family: Inter, Helvetica, Arial, sans-serif;
+    background: var(--black);
+}
+.content{
+    width: 100%;
+}
+.page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cards-wrapper {
+    display: grid;
+    grid: 586px / repeat(3,310px);
+    padding: 24px 48px;
+    gap: 32px;
+    max-width: calc(100vw - 205px);
+}
 h1:focus {
     outline: none;
 }

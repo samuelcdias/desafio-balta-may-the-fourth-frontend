@@ -2,6 +2,7 @@
 using Staris.Shared.Services.Interfaces;
 using Staris.Shared.ViewModel;
 using System.Net.Http.Json;
+using System.Web;
 
 namespace Staris.Shared.Services
 {
@@ -13,36 +14,34 @@ namespace Staris.Shared.Services
         {
             _client = client;
             _client.BaseAddress = new Uri(Configuration.BaseUri);
-
-            //_endpoint = "films/";
             _endpoint = "movies/";
-
         }
 
-        public async Task<List<MovieViewModel>> GetList()
+        public async Task<ResultViewModel<MovieViewModel>> GetList()
         {
             var Result = await _client.GetFromJsonAsync<ResultViewModel<MovieViewModel>>(_endpoint);
-            return Result?.Results ?? [];
+            return Result ?? new ResultViewModel<MovieViewModel>();
         }
-        public async Task<List<MovieViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder)
+        public async Task<ResultViewModel<MovieViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder)
         {
             string parameters = Configuration.BuildPostParameters(search, page, perPage, sortBy, sortOrder);
             
             var Result = await _client.GetFromJsonAsync<ResultViewModel<MovieViewModel>>(_endpoint+parameters);
-            return Result?.Results ?? [];
+            return Result ?? new ResultViewModel<MovieViewModel>();
         }
-        public async Task<List<MovieViewModel>> GetList(string search, int page, int perPage)
+        public async Task<ResultViewModel<MovieViewModel>> GetList(string search, int page, int perPage)
         {
             string parameters = Configuration.BuildPostParameters(search, page, perPage, "", "");
 
             var Result = await _client.GetFromJsonAsync<ResultViewModel<MovieViewModel>>(_endpoint + parameters);
-            return Result?.Results ?? [];
+            return Result ?? new ResultViewModel<MovieViewModel>();
         }
-        public async Task<List<MovieViewModel>> GetList( int page, int perPage)
+        public async Task<ResultViewModel<MovieViewModel>> GetList( int page, int perPage)
         {
             string parameters = Configuration.BuildPostParameters("", page, perPage, "", "");
+            
             var Result = await _client.GetFromJsonAsync<ResultViewModel<MovieViewModel>>(_endpoint + parameters);
-            return Result?.Results ?? [];
+            return Result ?? new ResultViewModel<MovieViewModel>();
         }
 
         public async Task<MovieViewModel> GetById(int Id)

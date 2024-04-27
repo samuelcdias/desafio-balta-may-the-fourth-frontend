@@ -1,14 +1,13 @@
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection.Extensions;
-using Staris.Shared.Configurations;
 using Staris.Shared.Services;
 using Staris.Shared.Services.Interfaces;
 using StarWar;
 using StarWar.Pages;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
-builder.RootComponents.Add<App>("#app");
+builder.RootComponents.Add <App> ("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.TryAddTransient(sp => new HttpClient
