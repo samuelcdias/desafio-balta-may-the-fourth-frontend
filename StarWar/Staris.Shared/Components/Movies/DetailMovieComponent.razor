@@ -1,0 +1,54 @@
+@inherits DetailMovie
+
+
+@if (Model is not null && IsDone)
+{
+
+    <section>
+        <h1>@Model.Title</h1>
+        <img src="@Model.ImageUrl" alt="@Model.Title" style="width: 250px;" />
+        <p>@Model.Episode</p>
+        <section>
+            <h3>Persons</h3>
+            <ul>
+                @if (Model.Characters?.Count > 0)
+                {
+                    @foreach (var p in Model.Characters)
+                    {
+                        <li>@p.Title</li>
+                    }
+                }
+            </ul>
+        </section>
+        <section>
+            <h3>Vehicles</h3>
+            <ul>
+                @if (Model.Vehicles?.Count > 0)
+                {
+                    @foreach (var p in Model.Vehicles)
+                    {
+                        <li>@p.Title</li>
+                    }
+                }
+            </ul>
+        </section>
+        <section>
+            <h3>Starships</h3>
+            <ul>
+                @if (Model.Starships?.Count > 0)
+                {
+                    @foreach (var p in Model.Starships)
+                    {
+                        <li>@p.Title</li>
+                    }
+                }
+            </ul>
+        </section>
+
+    </section>
+
+
+
+
+}
+

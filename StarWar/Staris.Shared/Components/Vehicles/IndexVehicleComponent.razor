@@ -10,7 +10,11 @@
         {
             @foreach(var v in Model)
             {
-                <li>Veículo:@v.Name  -  Modelo: @v.Model</li>
+                <li>
+                    Veículo:@v.Name  -  Modelo: @v.Model
+                    <a href="/vehicles/@v.Id">Details</a>
+                </li>
+
             }
         }
     </ul>
