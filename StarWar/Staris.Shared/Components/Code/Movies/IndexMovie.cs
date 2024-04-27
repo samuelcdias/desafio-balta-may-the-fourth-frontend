@@ -4,7 +4,7 @@ using Staris.Shared.ViewModel;
 
 namespace Staris.Shared.Components.Code.Movies;
 
-public class IndexFilm: ComponentBaseGeneric<List<MovieViewModel>>
+public class IndexMovie: ComponentBaseGeneric<List<MovieViewModel>>
 {
     [Inject]
     public IMovieService _service { get; set; } = null!;
