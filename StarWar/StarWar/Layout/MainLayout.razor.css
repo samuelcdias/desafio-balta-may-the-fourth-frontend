@@ -1,3 +1,9 @@
+main {
+    display: flex;
+    width: 100%;
+    flex: 1;
+}
+
 .page {
     position: relative;
     display: flex;
@@ -24,11 +30,6 @@ header .title-header {
         display: none;
     }
 
-main {
-    display: flex;
-    width: 100%;
-    flex: 1;
-}
 @media all and (max-width: 992px){
     .sidebar {
         display: none;
