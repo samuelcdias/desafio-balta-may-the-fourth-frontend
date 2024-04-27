@@ -7,10 +7,10 @@ public interface IMovieService
     /// Retorna Lista de Filme
     /// </summary>
     /// <returns></returns>
-    public Task<List<MovieViewModel>> GetList();
-    public Task<List<MovieViewModel>> GetList(int page, int perPage);
-    public Task<List<MovieViewModel>> GetList(string search, int page, int perPage);
-    public Task<List<MovieViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder);
+    public Task<ResultViewModel<MovieViewModel>> GetList();
+    public Task<ResultViewModel<MovieViewModel>> GetList(int page, int perPage);
+    public Task<ResultViewModel<MovieViewModel>> GetList(string search, int page, int perPage);
+    public Task<ResultViewModel<MovieViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder);
     
 
     /// <summary>

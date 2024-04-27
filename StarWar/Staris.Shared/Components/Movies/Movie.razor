@@ -1,17 +1,19 @@
-﻿<section class="card-film">
-    <div class="image-wrapper">
-        <span class="episode">@item.Episode.ToRoman()</span>
-        <span class="overlay-effect"></span>
-        <span class="lighten-effect"></span>
-        <img src="@GetImage()" alt="@item.Title" loading="eager" />
-    </div>
-    <div class="description-wrapper">
-        <h2 class="title">@item.Title</h2>
-        <p class="description"> Diretor: @item.Director</p>
-        <p class="description"> Produtor: @item.Producer</p>
-        <p class="description"> Data de lançamento: @DateParsed(item.ReleaseDate)</p>
-    </div>
-</section>
+﻿<a href="/movies/@item.Id" class="link">
+    <section class="card-film">
+        <div class="image-wrapper">
+            <span class="episode">@item.Episode.ToRoman()</span>
+            <span class="overlay-effect"></span>
+            <span class="lighten-effect"></span>
+            <img src="@GetImage()" alt="@item.Title" loading="eager" />
+        </div>
+        <div class="description-wrapper">
+            <h2 class="title">@item.Title</h2>
+            <p class="description"> Diretor: @item.Director</p>
+            <p class="description"> Produtor: @item.Producer</p>
+            <p class="description"> Data de lançamento: @DateParsed(item.ReleaseDate)</p>
+        </div>
+    </section>
+</a>
 
 @code {
     [Parameter]

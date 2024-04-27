@@ -1,19 +1,21 @@
-﻿@inherits IndexFilm
+﻿
+@inherits IndexFilm
 
 @if (Model is not null)
 {
-    <h1>Lista de Filmes - QTD:@Model?.Count ?? 0</h1>
+    <h1 class="sr-only">Lista de Filmes</h1>
 
      @if (IsDone)
      {
-        <section class="cards-wrapper">
+         <section class="page">
+            <div class="cards-wrapper">
         
-            @foreach(var item in Model)
-            {
-                <Movie item="@item" />
-            }
-        
-   
+                @foreach(var item in Model)
+                {
+                    <Movie item="@item" />
+                }
+            </div>
+                <PaginationComponent TotalPages="@TotalPages" />
         </section>
      }
      else
