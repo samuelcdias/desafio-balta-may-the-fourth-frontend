@@ -10,7 +10,7 @@ builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
 #region HttpClient
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(Configuration.BaseUri) });
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(AppConfig.BaseUri) });
 #endregion
 
 #region IOCs

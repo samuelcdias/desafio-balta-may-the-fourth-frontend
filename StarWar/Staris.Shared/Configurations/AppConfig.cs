@@ -1,6 +1,8 @@
 ﻿namespace Staris.Shared.Configurations;
 
-public static class Configuration
+
+//Configuration é palavra "reservada"
+public static class AppConfig
 {
     public static string BaseUri { get; set; } 
     public static string DefaultUri { get; set; } = "https://staris-api.runasp.net/api/";

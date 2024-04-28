@@ -13,7 +13,7 @@ public class SpecieService : ISpecieService
     public SpecieService(HttpClient client)
     {
         _client = client;
-        _client.BaseAddress = new Uri(Configuration.BaseUri);
+        _client.BaseAddress = new Uri(AppConfig.BaseUri);
         _endPoint = "species";
     }
 
@@ -24,19 +24,19 @@ public class SpecieService : ISpecieService
     }
     public async Task<List<SpecieViewModel>> GetList(int page, int perPage)
     {
-        string parameters = Configuration.BuildPostParameters("", page, perPage,"","");
+        string parameters = AppConfig.BuildPostParameters("", page, perPage,"","");
         var resultBase = await _client.GetFromJsonAsync<ResultViewModel<SpecieViewModel>>(_endPoint + parameters);
         return resultBase?.Results ?? [];
     }
     public async Task<List<SpecieViewModel>> GetList(string search, int page, int perPage)
     {
-        string parameters = Configuration.BuildPostParameters(search, page, perPage,"","");
+        string parameters = AppConfig.BuildPostParameters(search, page, perPage,"","");
         var resultBase = await _client.GetFromJsonAsync<ResultViewModel<SpecieViewModel>>(_endPoint + parameters);
         return resultBase?.Results ?? [];
     }
     public async Task<List<SpecieViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder)
     {
-        string parameters = Configuration.BuildPostParameters(search, page, perPage, sortBy, sortOrder);
+        string parameters = AppConfig.BuildPostParameters(search, page, perPage, sortBy, sortOrder);
         var resultBase = await _client.GetFromJsonAsync<ResultViewModel<SpecieViewModel>>(_endPoint + parameters);
         return resultBase?.Results ?? [];
     }

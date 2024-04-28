@@ -13,7 +13,7 @@ public class StarshipService : IStarshipService
     public StarshipService(HttpClient client)
     {
         _client = client;
-        _client.BaseAddress = new Uri(Configuration.BaseUri);
+        _client.BaseAddress = new Uri(AppConfig.BaseUri);
         _endPoint = "starships/";
     }
     public async Task<List<StarshipViewModel>> GetList()
@@ -23,19 +23,19 @@ public class StarshipService : IStarshipService
     }
     public async Task<List<StarshipViewModel>> GetList(int page, int perPage)
     {
-        string parameters = Configuration.BuildPostParameters("", page, perPage, "","");
+        string parameters = AppConfig.BuildPostParameters("", page, perPage, "","");
         var starShips = await _client.GetFromJsonAsync<ResultViewModel<StarshipViewModel>>(_endPoint + parameters);
         return starShips?.Results ?? [];
     }
     public async Task<List<StarshipViewModel>> GetList(string search, int page, int perPage)
     {
-        string parameters = Configuration.BuildPostParameters(search, page, perPage, "", "");
+        string parameters = AppConfig.BuildPostParameters(search, page, perPage, "", "");
         var starShips = await _client.GetFromJsonAsync<ResultViewModel<StarshipViewModel>>(_endPoint + parameters);
         return starShips?.Results ?? [];
     }
     public async Task<List<StarshipViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder)
     {
-        string parameters = Configuration.BuildPostParameters(search, page, perPage, sortBy, sortOrder);
+        string parameters = AppConfig.BuildPostParameters(search, page, perPage, sortBy, sortOrder);
         var starShips = await _client.GetFromJsonAsync<ResultViewModel<StarshipViewModel>>(_endPoint + parameters);
         return starShips?.Results ?? [];
     }

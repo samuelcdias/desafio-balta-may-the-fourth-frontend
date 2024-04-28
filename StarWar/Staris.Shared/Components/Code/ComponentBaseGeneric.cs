@@ -13,23 +13,22 @@ public abstract class ComponentBaseGeneric<T> : ComponentBase
     public bool IsDone { get; set; }
 
 
-   //[Inject]
-   //public IJSRuntime JSRuntime { get; set; }
-   //
-   //protected override async void OnParametersSet()
-   //{
-   //    if (!string.IsNullOrEmpty(Configuration.BaseUri) && false)
-   //    {
-   //        // Verifica se há uma configuração armazenada no local storage
-   //        if (await JSRuntime.InvokeAsync<bool>("localStorage.getItem", "BaseUri"))
-   //        {
-   //            Configuration.BaseUri = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "BaseUri");
-   //        }
-   //        else
-   //        {
-   //            // Se não houver, usa a configuração padrão
-   //            Configuration.BaseUri = "https://staris-api.runasp.net/api/";
-   //        }
-   //    }
-   //}
+    [Inject]
+    public IJSRuntime JSRuntime { get; set; }
+    protected override async void OnParametersSet()
+    {
+        if (!string.IsNullOrEmpty(AppConfig.BaseUri) && false)
+        {
+            // Verifica se há uma configuração armazenada no local storage
+            if (await JSRuntime.InvokeAsync<bool>("localStorage.getItem", "BaseUri"))
+            {
+                AppConfig.BaseUri = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "BaseUri");
+            }
+            else
+            {
+                // Se não houver, usa a configuração padrão
+                AppConfig.BaseUri = "https://staris-api.runasp.net/api/";
+            }
+        }
+    }
 }

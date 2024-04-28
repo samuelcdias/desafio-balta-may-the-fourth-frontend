@@ -13,7 +13,7 @@ public class PlanetService : IPlanetService
     public PlanetService(HttpClient client)
     {
         _client = client;
-        _client.BaseAddress = new Uri(Configuration.BaseUri);
+        _client.BaseAddress = new Uri(AppConfig.BaseUri);
         _endPoint = "planets/";
     }
 
@@ -24,19 +24,19 @@ public class PlanetService : IPlanetService
     }
     public async Task<List<PlanetViewModel>> GetList(int page, int perPage)
     {
-        string parameters = Configuration.BuildPostParameters("", page, perPage, "", "");
+        string parameters = AppConfig.BuildPostParameters("", page, perPage, "", "");
         var ResultBase = await _client.GetFromJsonAsync<ResultViewModel<PlanetViewModel>>(_endPoint + parameters);
         return ResultBase?.Results ?? [];
     }
     public async Task<List<PlanetViewModel>> GetList(string search, int page, int perPage)
     {
-        string parameters = Configuration.BuildPostParameters(search, page, perPage, "", "");
+        string parameters = AppConfig.BuildPostParameters(search, page, perPage, "", "");
         var ResultBase = await _client.GetFromJsonAsync<ResultViewModel<PlanetViewModel>>(_endPoint + parameters);
         return ResultBase?.Results ?? [];
     }
     public async Task<List<PlanetViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder)
     {
-        string parameters = Configuration.BuildPostParameters(search, page, perPage, sortBy, sortOrder);
+        string parameters = AppConfig.BuildPostParameters(search, page, perPage, sortBy, sortOrder);
         var ResultBase = await _client.GetFromJsonAsync<ResultViewModel<PlanetViewModel>>(_endPoint + parameters);
         return ResultBase?.Results ?? [];
     }

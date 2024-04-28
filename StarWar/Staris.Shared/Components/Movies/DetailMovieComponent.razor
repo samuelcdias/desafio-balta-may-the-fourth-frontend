@@ -15,7 +15,7 @@
                 {
                     @foreach (var p in Model.Characters)
                     {
-                        <li>@p.Title</li>
+                        <li><a href="@($"/cha/{p.Id}")"></a> @p.Title</li>
                     }
                 }
             </ul>

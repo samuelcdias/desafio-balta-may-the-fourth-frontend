@@ -13,7 +13,7 @@ namespace Staris.Shared.Services
         public MovieService(HttpClient client)
         {
             _client = client;
-            _client.BaseAddress = new Uri(Configuration.BaseUri);
+            _client.BaseAddress = new Uri(AppConfig.BaseUri);
             _endpoint = "movies/";
         }
 
@@ -24,21 +24,21 @@ namespace Staris.Shared.Services
         }
         public async Task<ResultViewModel<MovieViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder)
         {
-            string parameters = Configuration.BuildPostParameters(search, page, perPage, sortBy, sortOrder);
+            string parameters = AppConfig.BuildPostParameters(search, page, perPage, sortBy, sortOrder);
             
             var Result = await _client.GetFromJsonAsync<ResultViewModel<MovieViewModel>>(_endpoint+parameters);
             return Result ?? new ResultViewModel<MovieViewModel>();
         }
         public async Task<ResultViewModel<MovieViewModel>> GetList(string search, int page, int perPage)
         {
-            string parameters = Configuration.BuildPostParameters(search, page, perPage, "", "");
+            string parameters = AppConfig.BuildPostParameters(search, page, perPage, "", "");
 
             var Result = await _client.GetFromJsonAsync<ResultViewModel<MovieViewModel>>(_endpoint + parameters);
             return Result ?? new ResultViewModel<MovieViewModel>();
         }
         public async Task<ResultViewModel<MovieViewModel>> GetList( int page, int perPage)
         {
-            string parameters = Configuration.BuildPostParameters("", page, perPage, "", "");
+            string parameters = AppConfig.BuildPostParameters("", page, perPage, "", "");
             
             var Result = await _client.GetFromJsonAsync<ResultViewModel<MovieViewModel>>(_endpoint + parameters);
             return Result ?? new ResultViewModel<MovieViewModel>();

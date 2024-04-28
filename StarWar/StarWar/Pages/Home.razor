@@ -1,11 +1,19 @@
-﻿@page "/"
-
+﻿@page "/w"
+@inject IJSRuntime JSRuntime
 <PageTitle>Home</PageTitle>
 
 <h1>Hello, world!</h1>
 <label for="input_config">Caminho para API</label>
-<input id="input_config" type="text" @bind=Configuration.BaseUri />
+<input id="input_config" type="text" @bind=AppConfig.BaseUri />
 
 <div>
-    check: @Configuration.BaseUri
+    check: @AppConfig.BaseUri
 </div>
+
+@code{
+    private async Task SaveConfig()
+    {
+        // Salva a configuração no local storage
+        await JSRuntime.InvokeVoidAsync("localStorage.setItem", "BaseUri", AppConfig.BaseUri);
+    }
+}

@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarWar", "StarWar\StarWar.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Staris.Shared", "Staris.Shared\Staris.Shared.csproj", "{1713E83E-973B-4B25-A109-E115268659DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiAppStarWars", "MauiAppStarWars\MauiAppStarWars.csproj", "{82AD5F29-2676-4F61-8DA4-256B1236CC43}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,12 @@ Global
 		{1713E83E-973B-4B25-A109-E115268659DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1713E83E-973B-4B25-A109-E115268659DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1713E83E-973B-4B25-A109-E115268659DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82AD5F29-2676-4F61-8DA4-256B1236CC43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82AD5F29-2676-4F61-8DA4-256B1236CC43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82AD5F29-2676-4F61-8DA4-256B1236CC43}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{82AD5F29-2676-4F61-8DA4-256B1236CC43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82AD5F29-2676-4F61-8DA4-256B1236CC43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82AD5F29-2676-4F61-8DA4-256B1236CC43}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
