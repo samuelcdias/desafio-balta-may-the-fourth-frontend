@@ -1,7 +1,5 @@
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using Microsoft.Extensions.DependencyInjection.Extensions;
-using Microsoft.JSInterop;
 using Staris.Shared.Configurations;
 using Staris.Shared.Services;
 using Staris.Shared.Services.Interfaces;
@@ -13,10 +11,6 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 
 #region HttpClient
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(Configuration.BaseUri) });
-#endregion
-
-#region <IJSRuntime, JSRuntime>
-//builder.Services.AddSingleton<IJSRuntime, JSRuntime>();
 #endregion
 
 #region IOCs
