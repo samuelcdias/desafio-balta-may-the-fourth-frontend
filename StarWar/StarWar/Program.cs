@@ -1,31 +1,32 @@
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.JSInterop;
+using Staris.Shared.Configurations;
 using Staris.Shared.Services;
 using Staris.Shared.Services.Interfaces;
 using StarWar;
-using StarWar.Pages;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
-builder.RootComponents.Add <App> ("#app");
+builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
-builder.Services.TryAddTransient(sp => new HttpClient
-{ BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+#region HttpClient
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(Configuration.BaseUri) });
+#endregion
 
-//builder.Services.AddHttpClient(Configuration.HttpClientName,
-//    x =>
-//    {
-//        x.BaseAddress = new Uri(Configuration.BaseUri);
-//    });
-//builder.Services.AddTransient<TestePessoa>();
+#region <IJSRuntime, JSRuntime>
+//builder.Services.AddSingleton<IJSRuntime, JSRuntime>();
+#endregion
 
-builder.Services.AddTransient<IMovieService, MovieService>();
-builder.Services.AddTransient<IPeopleService, PeopleService>();
-builder.Services.AddTransient<IStarshipService, StarshipService>();
-builder.Services.AddTransient<IVehicleService, VehicleService>();
-builder.Services.AddTransient<ISpecieService, SpecieService>();
-builder.Services.AddTransient<IPlanetService, PlanetService>();
+#region IOCs
+builder.Services.AddScoped<IMovieService, MovieService>();
+builder.Services.AddScoped<IPeopleService, PeopleService>();
+builder.Services.AddScoped<IStarshipService, StarshipService>();
+builder.Services.AddScoped<IVehicleService, VehicleService>();
+builder.Services.AddScoped<ISpecieService, SpecieService>();
+builder.Services.AddScoped<IPlanetService, PlanetService>();
+#endregion
 
 await builder.Build().RunAsync();
 

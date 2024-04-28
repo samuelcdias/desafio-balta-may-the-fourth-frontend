@@ -2,11 +2,8 @@
 
 public static class Configuration
 {
-    public static string HttpClientName  = "backend";
-    public static string BaseUri  = "http://localhost:5138/api/";
-    //https://swapi.py4e.com/api/
-    //https://swapi.dev/api/
-    //https://staris-api.runasp.net/api/
+    public static string BaseUri { get; set; } 
+    public static string DefaultUri { get; set; } = "https://staris-api.runasp.net/api/";
 
     public static string BuildPostParameters(string search, int page, int perPage, string sortBy, string sortOrder )
     {
