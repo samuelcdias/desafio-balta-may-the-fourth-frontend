@@ -1,5 +1,7 @@
-﻿@using Staris.Shared.Components.Code.Vehicles
+﻿@page "/vehicles/{id:int}"
+@using Staris.Shared.Components.Code.Vehicles
 @inherits DetailVehicle
+<PageTitle>Detail Vehicle</PageTitle>
 
 
 @if(Model is not null && IsDone)

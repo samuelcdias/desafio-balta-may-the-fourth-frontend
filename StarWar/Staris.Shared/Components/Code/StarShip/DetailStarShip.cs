@@ -12,6 +12,7 @@ public class DetailStarShip: ComponentBaseGeneric<StarshipViewModel>
 
     [Inject]
     public IStarshipService _service { get; set; } = null!;
+   // public string ImgBase64 { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
@@ -20,6 +21,9 @@ public class DetailStarShip: ComponentBaseGeneric<StarshipViewModel>
         {
             Model = await _service.GetById(Id);
             IsDone = true;
+
+           // ImgBase64 = await BaixarImagemParaBase64(Model.ImageUrl);
+            StateHasChanged();
         }
         catch { }
     }

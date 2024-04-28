@@ -1,12 +1,14 @@
-﻿@using Staris.Shared.Components.Code.StarShip
+﻿@page "/starships/{Id:int}"
+@using Staris.Shared.Components.Code.StarShip
 @inherits DetailStarShip
+<PageTitle>Detail StarShip</PageTitle>
 
 @if(Model is not null && IsDone)
 {
-    <section>
+    <section style="width">
         <h1>@Model.Name</h1>
         <p>Model:@Model.Model Cost:@Model.CostInCredits Capacity:@Model.CargoCapacity </p>
-        <img src="@Model.ImageUrl" alt="@Model.Name"/>
+        <img src="@(RemoverSubstring(Model.ImageUrl))" alt="@Model.Name" />
         @if(Model.Films?.Count > 0)
         {
             <section>

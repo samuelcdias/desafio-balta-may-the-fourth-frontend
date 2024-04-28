@@ -1,6 +1,8 @@
-﻿@using Staris.Shared.Components.Code.Planets
-
+﻿@page "/planets/{Id:int}"
+@using Staris.Shared.Components.Code.Planets
 @inherits DetailPlanet
+<PageTitle>Detail Planet</PageTitle>
+
 
 @if(Model is not null)
 {

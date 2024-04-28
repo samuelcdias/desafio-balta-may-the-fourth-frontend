@@ -1,7 +1,6 @@
 ﻿using Staris.Shared.Configurations;
 using Staris.Shared.Services.Interfaces;
 using Staris.Shared.ViewModel;
-using System.Globalization;
 using System.Net.Http.Json;
 
 namespace Staris.Shared.Services;

@@ -1,6 +1,7 @@
+@page "/movies/{Id:int}"
 @inherits DetailMovie
 
-
+<PageTitle>Detail Movie</PageTitle>
 @if (Model is not null && IsDone)
 {
 
@@ -15,7 +16,7 @@
                 {
                     @foreach (var p in Model.Characters)
                     {
-                        <li><a href="@($"/cha/{p.Id}")"></a> @p.Title</li>
+                        <li><a href="@($"/people/{p.Id}")">@p.Title</a> </li>
                     }
                 }
             </ul>
@@ -46,9 +47,6 @@
         </section>
 
     </section>
-
-
-
 
 }
 

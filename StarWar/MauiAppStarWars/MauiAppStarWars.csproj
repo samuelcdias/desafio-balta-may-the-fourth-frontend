@@ -68,4 +68,8 @@
       <ProjectReference Include="..\Staris.Shared\Staris.Shared.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Components\Pages\" />
+    </ItemGroup>
+
 </Project>

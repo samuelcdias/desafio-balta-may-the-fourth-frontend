@@ -1,7 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
-using Staris.Shared.Services.Interfaces;
-using Staris.Shared.Services;
-using Staris.Shared.Configurations;
+using Staris.Shared.Extensions;
 
 namespace MauiAppStarWars
 {
@@ -25,16 +23,10 @@ namespace MauiAppStarWars
 #endif
 
 
-            #region HttpClient
-            builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(AppConfig.BaseUri) });
-            #endregion
+          
+
             #region IOCs
-            builder.Services.AddScoped<IMovieService, MovieService>();
-            builder.Services.AddScoped<IPeopleService, PeopleService>();
-            builder.Services.AddScoped<IStarshipService, StarshipService>();
-            builder.Services.AddScoped<IVehicleService, VehicleService>();
-            builder.Services.AddScoped<ISpecieService, SpecieService>();
-            builder.Services.AddScoped<IPlanetService, PlanetService>();
+            builder.Services.AddIocSSR();
             #endregion
 
             return builder.Build();
