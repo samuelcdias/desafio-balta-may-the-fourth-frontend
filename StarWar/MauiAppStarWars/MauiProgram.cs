@@ -22,11 +22,8 @@ namespace MauiAppStarWars
     		builder.Logging.AddDebug();
 #endif
 
-
-          
-
             #region IOCs
-            builder.Services.AddIocSSR();
+            builder.Services.AddIocSSR().GetAwaiter().GetResult();
             #endregion
 
             return builder.Build();

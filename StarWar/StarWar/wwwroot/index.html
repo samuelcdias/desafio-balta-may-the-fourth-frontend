@@ -31,6 +31,20 @@
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
     <script>navigator.serviceWorker.register('service-worker.js');</script>
+    <script>
+        window.localStorage = window.localStorage || (function () {
+            var store = {};
+
+            return {
+                getItem: function (key) {
+                    return store[key];
+                },
+                setItem: function (key, value) {
+                    store[key] = value.toString();
+                }
+            };
+        })();
+    </script>
 </body>
 
 </html>
