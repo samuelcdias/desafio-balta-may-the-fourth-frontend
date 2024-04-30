@@ -1,0 +1,36 @@
+﻿    <section class="card-film" >
+        @if (BodyFragment is not null)
+        {
+            <div class="image-wrapper">
+                <span class="overlay-effect"></span>
+                <span class="lighten-effect"></span>
+                @BodyFragment
+            </div>
+        }
+        @if(FooterFragment is not null)
+        {
+            <div class="description-wrapper">
+                @FooterFragment
+            </div>
+        }
+    </section>
+
+
+@code {
+    [Parameter]
+    public RenderFragment? BodyFragment { get; set; }
+    [Parameter]
+    public RenderFragment? FooterFragment { get; set; }
+    [Parameter]
+    public string? NavTo { get; set; }
+    [Parameter]
+    public string? Height {
+        get 
+        {
+            return Height += Height.EndsWith("px") ? "" : "px";
+        }
+        set { Height = value; }
+    }
+
+
+}

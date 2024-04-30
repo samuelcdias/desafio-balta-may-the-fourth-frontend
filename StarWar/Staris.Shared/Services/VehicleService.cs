@@ -14,7 +14,7 @@ public class VehicleService : IVehicleService
     {
         _client = client;
         _client.BaseAddress = new Uri(AppConfig.BaseUri);
-        _endPoint = "vehicless/";
+        _endPoint = "vehicles/";
     }
 
     public async Task<List<VehicleViewModel>> GetList()

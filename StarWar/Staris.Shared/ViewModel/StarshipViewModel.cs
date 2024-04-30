@@ -2,13 +2,13 @@
 
 namespace Staris.Shared.ViewModel;
 
-public class StarshipViewModel: ViewModelBase
+public class StarshipViewModel : ViewModelBase
 {
     public string? Name { get; set; }
     public string? Model { get; set; }
     public string? Manufacturer { get; set; }
 
-    [JsonPropertyName("cost_in_credits")]
+    [JsonPropertyName("costInCredits")]
     public string? CostInCredits { get; set; }
     [JsonPropertyName("length")]
     public string? Length { get; set; }
@@ -37,7 +37,7 @@ public class StarshipViewModel: ViewModelBase
     /// Velocidade - megalight por hora (abreviado MGLT) foi uma unidade usada para medir a velocidade relativa subluz de naves estelares.
     /// </summary>
     [JsonPropertyName("megalights")]
-    public string? Mglt { get; set; } 
+    public string? Mglt { get; set; }
     public string? Consumables { get; set; }
 
     [JsonPropertyName("starship_class")]

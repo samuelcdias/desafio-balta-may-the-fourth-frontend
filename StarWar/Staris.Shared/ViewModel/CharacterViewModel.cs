@@ -8,14 +8,14 @@ public sealed class CharacterViewModel : ViewModelBase
     public string? Height { get; set; }
     public string? Weight { get; set; }
 
-    [JsonPropertyName("hair_color")]
+    [JsonPropertyName("hairColor")]
     public string? HairColor { get; set; }
     public string? Mass { get; set; }
 
-    [JsonPropertyName("skin_color")]
+    [JsonPropertyName("skinColor")]
     public string? SkinColor { get; set; }
 
-    [JsonPropertyName("eye_color")]
+    [JsonPropertyName("eyeColor")]
     public string? EyeColor { get; set; }
 
     [JsonPropertyName("birthYear")]
@@ -32,6 +32,6 @@ public sealed class CharacterViewModel : ViewModelBase
     public List<VehicleViewModel>? VehiclesVM { get; set; }
     public List<BaseToListViewModel>? Starships { get; set; }
     public List<StarshipViewModel>? StarshipsVM { get; set; }
-    
+
 
 }

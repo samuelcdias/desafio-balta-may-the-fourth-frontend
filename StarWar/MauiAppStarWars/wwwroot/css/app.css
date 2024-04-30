@@ -1,9 +1,45 @@
-﻿html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+﻿:root {
+    --white: #fff;
+    --metal: #bfbfbf;
+    --star: #ffcf00;
+    --black: #1e1e1e;
+}
+
+body {
+    font-family: Inter, Helvetica, Arial, sans-serif;
+    background: var(--black);
+    color: var(--star);
+}
+
+.navbar {
+    padding: 0;
+}
+
+.content {
+    width: 100%;
+}
+
+.page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards-wrapper {
+    display: grid;
+    grid: 586px / repeat(3,310px);
+    padding: 24px 48px;
+    gap: 32px;
+    max-width: calc(100vw - 205px);
+}
+
+h1:focus {
+    outline: none;
 }
 
 a, .btn-link {
-    color: #006bb7;
+    color: #0071c1;
 }
 
 .btn-primary {
@@ -20,21 +56,18 @@ a, .btn-link {
     padding-top: 1.1rem;
 }
 
-h1:focus {
-    outline: none;
-}
-
 .valid.modified:not([type=checkbox]) {
     outline: 1px solid #26b050;
 }
 
 .invalid {
-    outline: 1px solid #e50000;
+    outline: 1px solid red;
 }
 
 .validation-message {
-    color: #e50000;
+    color: red;
 }
+
 
 #blazor-error-ui {
     background: lightyellow;

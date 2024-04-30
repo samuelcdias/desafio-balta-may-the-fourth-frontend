@@ -5,21 +5,33 @@
 
 <h1>Lista de Veículos</h1>
 
-@if(Model is not null)
+@if (Model is not null && IsDone)
 {
-    <ul>
-        @if(IsDone)
-        {
-            @foreach(var v in Model)
+    <section class="page">
+        <div class="cards-wrapper">
+            @foreach (var v in Model)
             {
-                <li>
-                    Veículo:@v.Name  -  Modelo: @v.Model
-                    <a href="/vehicles/@v.Id">Details</a>
-                </li>
+                <BodyFragment>
+                    <img src="@(RemoverSubstring(v.ImageUrl))" alt="@v.Name" />
+                </BodyFragment>
+                <FooterFragment>
+                    <h2 class="title">@v.Name</h2>
+                    <p class="description">Modelo: @v.Model</p>
+                    <p class="description" title="Quantidade necessária de tripulantes para a nave">Tripulantes: @v.Crew</p>
+                    <p class="description">Custo em Crdt: @v.CostInCredits</p>
+                    <p class="description">Fabricante: @v.Manufacturer</p>
+                    @* <p class="description" title="O número máximo de Megalights que esta nave pode viajar">MGLT:
+            @v.Manufacturer
+            </p>
+            <p class="description" title="Velocidade máxima na atmosfera">Vel. Máx: @v.MaxSpeedAtmosphering</p>
+            *@
+                </FooterFragment>
 
             }
-        }
-    </ul>
+        </div>
+    </section>
+
+
 }
 else
 {
@@ -27,4 +39,3 @@ else
         .....Carregando
     </div>
 }
-

@@ -2,7 +2,7 @@
 
 namespace Staris.Shared.ViewModel;
 
-public class VehicleViewModel: ViewModelBase
+public class VehicleViewModel : ViewModelBase
 {
     public string? Name { get; set; }
     public string? Model { get; set; }
@@ -10,7 +10,7 @@ public class VehicleViewModel: ViewModelBase
     /// <summary>
     /// O custo deste veículo novo, em Créditos Galácticos
     /// </summary>
-    [JsonPropertyName("cost_in_credits")]
+    [JsonPropertyName("costInCredits")]
     public string? CostInCredits { get; set; }
 
     [JsonPropertyName("lenght")]

@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarWar", "StarWar\StarWar.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Staris.Shared", "Staris.Shared\Staris.Shared.csproj", "{1713E83E-973B-4B25-A109-E115268659DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiAppStarWars", "MauiAppStarWars\MauiAppStarWars.csproj", "{82AD5F29-2676-4F61-8DA4-256B1236CC43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiAppStarWars", "MauiAppStarWars\MauiAppStarWars.csproj", "{82AD5F29-2676-4F61-8DA4-256B1236CC43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

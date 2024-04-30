@@ -6,28 +6,29 @@
 <h1>Personagens</h1>
 
 
-@if (IsDone)
+@if (Model is not null && IsDone)
 {
-<ul>
-    @if (Model is not null)
-    {
-        <section class="cards-wrapper">
-
-        @foreach (var p in Model)
-        {
-            <li>
-                Nome:@p.Name  Nacimento:@p.BirthYear  Genero: @p.Gender  <img src="@p.ImageUrl" alt="@p.Name" style="width: 100px" />
-                <a href="/people/@p.Id">Detais</a>
-            </li>
-        }
-        </section>
-    }
-</ul>
+    <section class="page">
+        <div class="cards-wrapper">
+            @foreach (var p in Model)
+            {
+                <BodyFragment>
+                    <img src="@(RemoverSubstring(p.ImageUrl))" alt="@p.Name" />
+                </BodyFragment>
+                <FooterFragment>
+                    <h2 class="title">@p.Name</h2>
+                    <p class="description">Gênero: @p.Gender</p>
+                    <p class="description">Ano Nascimento: @p.BirthYear</p>
+                    <p class="description">Olhos: @p.EyeColor</p>
+                    <p class="description">Cabelo: @p.HairColor</p>
+                </FooterFragment>
+            }
+        </div>
+    </section>
 }
 else
 {
     <div>
-    ...Carregando
+        ...Carregando
     </div>
 }
-

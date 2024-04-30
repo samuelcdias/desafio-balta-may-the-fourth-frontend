@@ -3,20 +3,40 @@
   "WorkspaceRootPath": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|c:\\cursobalta\\desafios\\desafio-balta-may-the-fourth-frontend\\starwar\\staris.shared\\services\\planetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|solutionrelative:staris.shared\\services\\planetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|c:\\cursobalta\\desafios\\desafio-balta-may-the-fourth-frontend\\starwar\\staris.shared\\components\\code\\planets\\indexplanet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|solutionrelative:staris.shared\\components\\code\\planets\\indexplanet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|c:\\cursobalta\\desafios\\desafio-balta-may-the-fourth-frontend\\starwar\\staris.shared\\components\\planets\\indexplanetcomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|solutionrelative:staris.shared\\components\\planets\\indexplanetcomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A79CB5B6-66C8-4759-B29A-0BBCF23C4421}|StarWar\\StarWar.csproj|c:\\cursobalta\\desafios\\desafio-balta-may-the-fourth-frontend\\starwar\\starwar\\pages\\planets\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A79CB5B6-66C8-4759-B29A-0BBCF23C4421}|StarWar\\StarWar.csproj|solutionrelative:starwar\\pages\\planets\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\staris.shared\\components\\code\\vehicles\\indexvehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|solutionrelative:staris.shared\\components\\code\\vehicles\\indexvehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\staris.shared\\components\\shared\\cardcomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|solutionrelative:staris.shared\\components\\shared\\cardcomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\staris.shared\\components\\movies\\movie.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|solutionrelative:staris.shared\\components\\movies\\movie.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\staris.shared\\components\\movies\\movie.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|solutionrelative:staris.shared\\components\\movies\\movie.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\staris.shared\\components\\movies\\indexmoviecomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|solutionrelative:staris.shared\\components\\movies\\indexmoviecomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\staris.shared\\components\\movies\\indexmoviecomponent.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|solutionrelative:staris.shared\\components\\movies\\indexmoviecomponent.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A79CB5B6-66C8-4759-B29A-0BBCF23C4421}|StarWar\\StarWar.csproj|C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\starwar\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A79CB5B6-66C8-4759-B29A-0BBCF23C4421}|StarWar\\StarWar.csproj|solutionrelative:starwar\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\staris.shared\\components\\shared\\cardcomponent.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1713E83E-973B-4B25-A109-E115268659DC}|Staris.Shared\\Staris.Shared.csproj|solutionrelative:staris.shared\\components\\shared\\cardcomponent.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,7 +45,7 @@
       "VerticalTabListWidth": 211,
       "DocumentGroups": [
         {
-          "DockedWidth": 100,
+          "DockedWidth": 170,
           "SelectedChildIndex": 3,
           "Children": [
             {
@@ -43,54 +63,111 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PlanetService.cs",
-              "DocumentMoniker": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\Services\\PlanetService.cs",
-              "RelativeDocumentMoniker": "Staris.Shared\\Services\\PlanetService.cs",
-              "ToolTip": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\Services\\PlanetService.cs",
-              "RelativeToolTip": "Staris.Shared\\Services\\PlanetService.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAQwBwAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T20:57:37.133Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.razor",
-              "DocumentMoniker": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\StarWar\\Pages\\Planets\\Index.razor",
-              "RelativeDocumentMoniker": "StarWar\\Pages\\Planets\\Index.razor",
-              "ToolTip": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\StarWar\\Pages\\Planets\\Index.razor",
-              "RelativeToolTip": "StarWar\\Pages\\Planets\\Index.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-23T20:55:02.554Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "IndexPlanetComponent.razor",
               "DocumentMoniker": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\Components\\Planets\\IndexPlanetComponent.razor",
               "RelativeDocumentMoniker": "Staris.Shared\\Components\\Planets\\IndexPlanetComponent.razor",
               "ToolTip": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\Components\\Planets\\IndexPlanetComponent.razor",
               "RelativeToolTip": "Staris.Shared\\Components\\Planets\\IndexPlanetComponent.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAARAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-23T20:52:08.989Z",
+              "WhenOpened": "2024-04-30T11:28:26.74Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IndexPlanet.cs",
-              "DocumentMoniker": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\Components\\Code\\Planets\\IndexPlanet.cs",
-              "RelativeDocumentMoniker": "Staris.Shared\\Components\\Code\\Planets\\IndexPlanet.cs",
-              "ToolTip": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\Components\\Code\\Planets\\IndexPlanet.cs",
-              "RelativeToolTip": "Staris.Shared\\Components\\Code\\Planets\\IndexPlanet.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAQwBAAAAAnAAAA",
+              "Title": "IndexVehicle.cs",
+              "DocumentMoniker": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\Components\\Code\\Vehicles\\IndexVehicle.cs",
+              "RelativeDocumentMoniker": "Staris.Shared\\Components\\Code\\Vehicles\\IndexVehicle.cs",
+              "ToolTip": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\Components\\Code\\Vehicles\\IndexVehicle.cs",
+              "RelativeToolTip": "Staris.Shared\\Components\\Code\\Vehicles\\IndexVehicle.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T20:49:15.423Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-30T12:18:24.406Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "app.css",
+              "DocumentMoniker": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\StarWar\\wwwroot\\css\\app.css",
+              "RelativeDocumentMoniker": "StarWar\\wwwroot\\css\\app.css",
+              "ToolTip": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\StarWar\\wwwroot\\css\\app.css",
+              "RelativeToolTip": "StarWar\\wwwroot\\css\\app.css",
+              "ViewState": "AQIAACIAAAAAAAAAAAAmwDMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-04-30T11:53:32.463Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Movie.razor.css",
+              "DocumentMoniker": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\Components\\Movies\\Movie.razor.css",
+              "RelativeDocumentMoniker": "Staris.Shared\\Components\\Movies\\Movie.razor.css",
+              "ToolTip": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\Components\\Movies\\Movie.razor.css",
+              "RelativeToolTip": "Staris.Shared\\Components\\Movies\\Movie.razor.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADkAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-04-30T11:44:23.854Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Movie.razor",
+              "DocumentMoniker": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\Components\\Movies\\Movie.razor",
+              "RelativeDocumentMoniker": "Staris.Shared\\Components\\Movies\\Movie.razor",
+              "ToolTip": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\Components\\Movies\\Movie.razor",
+              "RelativeToolTip": "Staris.Shared\\Components\\Movies\\Movie.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-30T11:49:47.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CardComponent.razor",
+              "DocumentMoniker": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\Components\\Shared\\CardComponent.razor",
+              "RelativeDocumentMoniker": "Staris.Shared\\Components\\Shared\\CardComponent.razor",
+              "ToolTip": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\Components\\Shared\\CardComponent.razor",
+              "RelativeToolTip": "Staris.Shared\\Components\\Shared\\CardComponent.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-30T11:17:27.556Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IndexMovieComponent.razor",
+              "DocumentMoniker": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\Components\\Movies\\IndexMovieComponent.razor",
+              "RelativeDocumentMoniker": "Staris.Shared\\Components\\Movies\\IndexMovieComponent.razor",
+              "ToolTip": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\Components\\Movies\\IndexMovieComponent.razor",
+              "RelativeToolTip": "Staris.Shared\\Components\\Movies\\IndexMovieComponent.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-30T11:53:05.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IndexMovieComponent.razor.css",
+              "DocumentMoniker": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\Components\\Movies\\IndexMovieComponent.razor.css",
+              "RelativeDocumentMoniker": "Staris.Shared\\Components\\Movies\\IndexMovieComponent.razor.css",
+              "ToolTip": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\Components\\Movies\\IndexMovieComponent.razor.css",
+              "RelativeToolTip": "Staris.Shared\\Components\\Movies\\IndexMovieComponent.razor.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-04-30T12:01:42.926Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CardComponent.razor.css",
+              "DocumentMoniker": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\Components\\Shared\\CardComponent.razor.css",
+              "RelativeDocumentMoniker": "Staris.Shared\\Components\\Shared\\CardComponent.razor.css",
+              "ToolTip": "C:\\CursoBalta\\Desafios\\desafio-balta-may-the-fourth-frontend\\StarWar\\Staris.Shared\\Components\\Shared\\CardComponent.razor.css",
+              "RelativeToolTip": "Staris.Shared\\Components\\Shared\\CardComponent.razor.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-04-30T11:45:06.955Z"
             }
           ]
         }
