@@ -1,0 +1,68 @@
+@page "/people/{Id:int}"
+<PageTitle>Detail Person</PageTitle>
+@using Staris.Shared.Components.Code.People
+@inherits DetailPeople
+
+@if(Model is not null && IsDone)
+{
+    <section>
+        <h1>@Model.Name</h1>
+        <p>Details: BirthYear:@Model.BirthYear Eyes:@Model.EyeColor   HainColor:@Model.HairColor  Height:@Model.Height Mass:@Model.Mass </p>
+        <img src="@Model.ImageUrl" alt="@Model.Name" />
+        @if(Model.Films?.Count>0)
+        {
+            <section>
+                <h3>Movies</h3>
+                <ul>
+                    @foreach(var m in Model.Films)
+                    {
+                        <li>@m.Title</li>
+                    }
+                </ul>
+            </section>
+        }
+        @if (Model.Starships?.Count > 0)
+        {
+            <section>
+                <h3>Starships
+                    @if (Model.Gender == "female")
+                    {
+                        <h3>she</h3>
+                    }
+                    else
+                    {
+                        <h3>he</h3>
+                    }
+                    was a crew member of</h3>
+                <ul>
+                    @foreach (var m in Model.Starships)
+                    {
+                        <li>@m.Title</li>
+                    }
+                </ul>
+            </section>
+        }
+        @if (Model.Vehicles?.Count > 0)
+        {
+            <section>
+                <h3>Vehicles
+                    @if (Model.Gender == "female")
+                    {
+                        <h3>she</h3>
+                    }
+                    else
+                    {
+                        <h3>he</h3>
+                    }
+                    was a crew member of
+                </h3>
+                <ul>
+                    @foreach (var m in Model.Vehicles)
+                    {
+                        <li>@m.Title</li>
+                    }
+                </ul>
+            </section>
+        }
+    </section>
+}

@@ -1,0 +1,34 @@
+﻿@page "/starships/{Id:int}"
+@using Staris.Shared.Components.Code.StarShip
+@inherits DetailStarShip
+<PageTitle>Detail StarShip</PageTitle>
+
+@if(Model is not null && IsDone)
+{
+    <section style="width">
+        <h1>@Model.Name</h1>
+        <p>Model:@Model.Model Cost:@Model.CostInCredits Capacity:@Model.CargoCapacity </p>
+        <img src="@(RemoverSubstring(Model.ImageUrl))" alt="@Model.Name" />
+        @if(Model.Films?.Count > 0)
+        {
+            <section>
+                <h3>Movies</h3>
+                <ul>
+                    @foreach(var m in Model.Films)
+                    {
+                        <li>@m.Title</li>
+                    }
+                </ul>
+            </section>
+        }
+    </section>
+
+}
+else
+{
+    <div>
+        .... Carregando
+    </div>
+}
+
+

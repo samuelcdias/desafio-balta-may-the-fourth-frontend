@@ -1,0 +1,19 @@
+.card-wrapper{
+	grid: 586px / repeat(3,310px);
+}
+/* breakpoint based on size of card */
+/* calc => (--width + 32px)*3 - 32px + 205px + 2 * 48px **/
+@media screen and (max-width: 1295px){
+	.cards-wrapper {
+		grid: 586px / repeat(2,310px);
+		padding: 36px 12px;
+		max-width: 100%;
+	}
+}
+@media screen and (max-width: 708px) {
+	.cards-wrapper {
+		grid: 586px / repeat(1,310px);
+		padding: 24px 12px;
+		max-width: 100%;
+	}
+}

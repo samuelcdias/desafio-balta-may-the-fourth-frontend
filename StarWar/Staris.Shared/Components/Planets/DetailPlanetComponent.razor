@@ -1,0 +1,38 @@
+﻿@page "/planets/{Id:int}"
+@using Staris.Shared.Components.Code.Planets
+@inherits DetailPlanet
+<PageTitle>Detail Planet</PageTitle>
+
+
+@if(Model is not null)
+{
+    <section>
+        <h1>@Model.Name</h1>
+        <p>Diameter:@Model.Diameter  Climate:@Model.Climate </p>
+        <img src="@Model.ImageUrl" alt="@Model.Name"/>
+        @if(Model.Movies?.Count>0)
+        {
+            <section>
+                <h3>Movies</h3>
+                <ul>
+                    @foreach(var m in Model.Movies)
+                    {
+                        <li>@m.Title</li>
+                    }
+                </ul>
+            </section>
+        }
+        @if (Model.Characters?.Count > 0)
+        {
+            <section>
+                <h3>People</h3>
+                <ul>
+                    @foreach (var m in Model.Characters)
+                    {
+                        <li>@m.Title</li>
+                    }
+                </ul>
+            </section>
+        }
+    </section>
+}

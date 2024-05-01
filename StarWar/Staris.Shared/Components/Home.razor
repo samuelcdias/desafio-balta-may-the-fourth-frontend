@@ -1,0 +1,28 @@
+﻿@page "/"
+@using Microsoft.JSInterop
+@inject IJSRuntime JSRuntime
+<PageTitle>Home</PageTitle>
+
+<label for="input_config">Caminho para API</label>
+<input id="input_config" type="text" @bind=AppConfig.BaseUri />
+
+@if (!string.IsNullOrEmpty(AppConfig.BaseUri))
+{
+    <div class="btn btn-success" @onclick=SaveConfig>Salvar no Storage</div>
+}
+else
+{
+    <div class="btn btn-success">Salvar no Storage</div>
+}
+
+<div>
+    CHECK: @AppConfig.BaseUri
+</div>
+
+@code {
+    private async Task SaveConfig()
+    {
+        // Salva a configuração no local storage
+        await JSRuntime.InvokeVoidAsync("localStorage.setItem", "BaseUri", AppConfig.BaseUri);
+    }
+}

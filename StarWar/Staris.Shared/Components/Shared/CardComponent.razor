@@ -1,0 +1,42 @@
+﻿<a href="@NavTo" class="link">
+    <section class="card-modified" style="width: @Width; height: @Height">
+        @if (BodyFragment is not null)
+        {
+            <div class="image-wrapper">
+                <span class="overlay-effect"></span>
+                @BodyFragment
+            </div>
+        }
+        @if(FooterFragment is not null)
+        {
+            <div class="description-wrapper">
+                @FooterFragment
+            </div>
+        }
+    </section>
+</a>
+
+@code {
+    [Parameter]
+    public RenderFragment? BodyFragment { get; set; }
+    [Parameter]
+    public RenderFragment? FooterFragment { get; set; }
+    [Parameter]
+    public string? NavTo { get; set; }
+    [Parameter]
+    public string? Height {
+        get 
+        {
+            return Height += Height.EndsWith("px") ? "" : "px";
+        }
+        set { Height = value; }
+    }
+    [Parameter]
+    public string? Width {
+        get 
+        {
+            return Height += Height.EndsWith("px") ? "" : "px";
+        }
+        set { Height = value; }
+    }
+}

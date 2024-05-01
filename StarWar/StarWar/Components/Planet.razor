@@ -1,0 +1,21 @@
+﻿<section class="card-planet">
+    <div class="image-wrapper">
+        <span class="overlay-effect"></span>
+        <img src="@planet.ImageUrl" alt="@planet.Name" loading="loadingMode" />
+    </div>
+    <div>
+        <h2 class="title">@planet.Name</h2>
+        <p>Population: @planet.Population</p>
+    </div>>
+</section>
+
+@code {
+    [Parameter]
+    public PlanetViewModel planet { get; set; } = null!;
+    [Parameter]
+    /// <summary>
+    /// Image loading mode
+    /// </summary>
+    /// <value> "lazy" | "eager"</value>
+    public string loadingMode { get; set; } = "lazy";
+}

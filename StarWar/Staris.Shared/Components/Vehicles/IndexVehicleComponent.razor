@@ -1,0 +1,27 @@
+﻿@page "/vehicles"
+@using Staris.Shared.Components.Code.Vehicles
+@inherits IndexVehicle
+<PageTitle>Vehicles</PageTitle>
+
+<h1>Lista de Veículos</h1>
+
+@if (Model is not null && IsDone)
+{
+    <section class="page">
+        <div class="cards-wrapper">
+            @foreach (var v in Model)
+            {
+                <VehiclesComponent Item="@v" />
+            }
+        </div>
+        <PaginationComponent TotalPages="@TotalPages" />
+    </section>
+
+
+}
+else
+{
+    <div>
+        .....Carregando
+    </div>
+}

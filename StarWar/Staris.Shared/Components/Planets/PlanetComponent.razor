@@ -1,0 +1,18 @@
+﻿@using Staris.Shared.Components.Code.Shared
+@inherits ItemCode<PlanetViewModel>
+
+<a href="./planets/@Item.Id" class="link">
+    <section class="card-modified">
+        <div class="image-wrapper">
+            <span class="overlay-effect"></span>
+            <img src="@GetImage()" alt="@Item.Name" loading="eager" />
+        </div>
+        <div class="description-wrapper">
+            <h2 class="title">@Item.Name</h2>
+            <p class="description">Clima: @Item.Climate</p>
+            <p class="description">População: @string.Format("{0:n0}", Item.Population) </p>
+            <p class="description">Diametro: @string.Format("{0:n0}", Item.Diameter) m</p>
+            <p class="description" title="Quantidade de dias para para o planeta realizar uma volta completa.">Periodo Orbitral: @Item.OrbitalPeriod dias</p>
+        </div>
+    </section>
+</a>

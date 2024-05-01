@@ -1,0 +1,25 @@
+﻿@page "/starships"
+@using Staris.Shared.Components.Code.StarShip
+@inherits IndexStarShip
+<PageTitle>StarShips</PageTitle>
+
+<h1>Naves</h1>
+@if (Model is not null && IsDone)
+{
+    <section class="page">
+        <div class="cards-wrapper">
+            @foreach (var m in Model)
+            {
+                <StarshipComponent Item="@m" />
+            }
+        </div>
+        <PaginationComponent TotalPages="@TotalPages" />
+    </section>
+
+}
+else
+{
+    <div>
+        ....Carregando
+    </div>
+}
