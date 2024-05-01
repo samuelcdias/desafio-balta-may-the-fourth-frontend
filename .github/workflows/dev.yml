@@ -37,10 +37,10 @@ jobs:
         run: cd StarWar/StarWar && dotnet restore
       
       - name: Build
-        run: cd ../.. && dotnet build StartWar/StarWar.csproj -c:Release --no-restore
+        run: cd ../.. && dotnet build StarWar/StartWar/StarWar.csproj -c:Release --no-restore
       
       - name: Publish .NET
-        run:  dotnet publish StartWar/StarWar.csproj -c:Release -o docs --nologo
+        run:  dotnet publish StarWar/StarWar/StarWar.csproj -c:Release -o docs --nologo
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
