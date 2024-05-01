@@ -37,13 +37,13 @@ jobs:
         run: dotnet restore
       
       - name: Build
-        run: cd StartWar && dotnet build -c Release --no-restore
+        run: cd StartWar && dotnet build -c:Release --no-restore
       
       - name: Publish .NET
         run: dotnet publish StarWar.csproj -c:Release -o docs --nologo
       
       - name: Setup Pages
-        uses: action/configure-pages@v4
+        uses: actions/configure-pages@v4
       
       - name: Upload
         uses: actions/upload-pages-artifact@v3
