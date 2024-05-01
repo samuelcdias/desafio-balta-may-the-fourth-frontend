@@ -34,13 +34,13 @@ jobs:
         run: dotnet workload install wasm-tools
       
       - name: Restore Dependencies
-        run: ls -la && cd StarWar && dotnet restore
+        run: ls -la && cd StarWar/StarWar && dotnet restore
       
       - name: Build
         run: dotnet build -c:Release --no-restore
       
       - name: Publish .NET
-        run: cd .. && dotnet publish StartWar/StarWar.csproj -c:Release -o docs --nologo
+        run: cd ../.. && dotnet publish StartWar/StarWar.csproj -c:Release -o docs --nologo
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
