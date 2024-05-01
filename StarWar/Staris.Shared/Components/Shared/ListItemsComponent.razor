@@ -4,7 +4,7 @@
 <section>
     <h3>@Name</h3>
     <ul>
-        @foreach(var item in @Items)
+        @foreach(var item in Items)
         {
             <li><a href="@(Url+item.Id)">@item.Title</a></li>     
         }
