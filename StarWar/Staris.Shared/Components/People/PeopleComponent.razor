@@ -1,0 +1,18 @@
+﻿@using Staris.Shared.Components.Code.Shared
+@inherits ItemCode<CharacterViewModel>
+
+<a href="/people/@Item.Id" class="link">
+    <section class="card-modified">
+        <div class="image-wrapper">
+            <span class="overlay-effect"></span>
+            <img src="@GetImage()" alt="@Item.Name" loading="eager" />
+        </div>
+        <div class="description-wrapper">
+            <h2 class="title">@Item.Name</h2>
+            <p class="description">Gênero: @Item.Gender</p>
+            <p class="description">Ano Nascimento: @Item.BirthYear</p>
+            <p class="description">Olhos: @Item.EyeColor</p>
+            <p class="description">Cabelo: @Item.HairColor</p>
+        </div>
+    </section>
+</a>

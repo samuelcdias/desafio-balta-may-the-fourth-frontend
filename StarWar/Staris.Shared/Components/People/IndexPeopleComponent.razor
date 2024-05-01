@@ -1,0 +1,26 @@
+﻿@page "/people"
+<PageTitle>People</PageTitle>
+@using Staris.Shared.Components.Code.People
+@inherits IndexPeople
+
+<h1>Personagens</h1>
+
+
+@if (Model is not null && IsDone)
+{
+    <section class="page">
+        <div class="cards-wrapper">
+            @foreach (var p in Model)
+            {
+                <PeopleComponent Item="@p" />
+            }
+        </div>
+        <PaginationComponent TotalPages="@TotalPages" />
+    </section>
+}
+else
+{
+    <div>
+        ...Carregando
+    </div>
+}

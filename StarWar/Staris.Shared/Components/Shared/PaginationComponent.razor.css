@@ -1,0 +1,38 @@
+.pagination {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 8px;
+}
+
+.first-item::before {
+	content: "\226A";
+}
+.last-item::before {
+	content: "\226B";
+}
+.page-item:first-child .page-link,
+.page-item:last-child .page-link {
+	border-radius: 8px;
+}
+.page-item .page-link {
+	border-radius: 8px;
+	background: transparent;
+	border: 1px solid var(--star);
+	color: var(--star);
+	padding: 6px;
+	font-weight: 600;
+	text-align: center;
+	min-width: 36px;
+	min-height: 36px;
+}
+
+.page-item .page-link:focus {
+	box-shadow: 0 0 0 .15rem rgba(255,207,0,.25);
+}
+
+.page-item.active .page-link {
+	background: var(--star);
+	color: var(--black);
+}

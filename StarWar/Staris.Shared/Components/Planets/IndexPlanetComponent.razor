@@ -1,0 +1,26 @@
+﻿@page "/planets"
+@using Staris.Shared.Components.Code.Planets
+@inherits IndexPlanet
+<PageTitle>Planetas</PageTitle>
+
+<h1>Planetas</h1>
+
+@if (Model is not null)
+{
+     <section class="page">
+        <div class="cards-wrapper">
+            @foreach (var m in Model)
+            {
+               <PlanetComponent Item="@m" />
+            }
+        </div>
+        <PaginationComponent TotalPages="@TotalPages" />
+    </section>
+
+}
+else
+{
+    <div>
+        ...Carregando
+    </div>
+}

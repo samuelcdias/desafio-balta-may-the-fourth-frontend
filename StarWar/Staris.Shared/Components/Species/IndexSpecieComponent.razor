@@ -1,0 +1,22 @@
+﻿@page "/species"
+@using Staris.Shared.Components.Code.Species
+@inherits IndexSpecie
+<PageTitle>Espécies</PageTitle>
+
+<h1>Lista de Espécies</h1>
+
+@if(Model is not null)
+{
+    <ul>
+        @foreach(var s in Model)
+        {
+            <li>Raça:@s.Name  Espectativa de vida:@s.AverageLifespan  Altura média:@s.AverageHeight</li>
+        }
+    </ul>
+}
+else
+{
+    <div>
+        ...Carregando
+    </div>
+}

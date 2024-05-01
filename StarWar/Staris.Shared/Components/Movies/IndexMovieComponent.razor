@@ -1,0 +1,35 @@
+﻿@page "/movies"
+@inherits IndexMovie
+<PageTitle>Movies</PageTitle>
+
+
+@if (Model is not null && IsDone)
+{
+    <h1 class="sr-only">Lista de Filmes</h1>
+
+    @if (IsDone)
+    {
+        <section class="page">
+            <div class="cards-wrapper">
+                @foreach (var item in Model)
+                {
+                    <Movie Item="@item" />
+                }
+            </div>
+            <PaginationComponent TotalPages="@TotalPages" />
+        </section>
+    }
+    else
+    {
+        <div>
+            ...Carregando
+        </div>
+    }
+}
+else
+{
+    <div>
+        ...Carregando
+    </div>
+}
+

@@ -1,0 +1,40 @@
+﻿section{
+	max-height: 274px;
+	border-radius: 8px;
+	padding: 16px;
+	border: 1px solid var(--star);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+h3{
+	color: var(--star);
+	font-size: 24px;
+}
+ul {
+	overflow: hidden;
+	overflow-y: scroll;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+ul li{
+	padding-left: 16px;
+
+}
+ul li a{
+	text-decoration: underline;
+	color: var(--white);
+	font-size: 16px;
+	font-weight: 500;
+}
+ul li a:visited{
+	color: var(--metal);
+}
+
+@media (max-width: 768px){
+	section{
+		padding: 8px;
+	}
+}

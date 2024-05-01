@@ -1,11 +1,12 @@
 {
-  "name": "StarWar",
-  "short_name": "StarWar",
+  "name": "Suprimentos Táticos e Recursos do Império",
+  "short_name": "StarIs",
   "id": "./",
-  "start_url": "./",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#03173d",
+  "theme_color": "#ffcf00",
+  "background_color": "#1e1e1e",
+  "scope": "/",
+  "start_url": "/movies",
   "prefer_related_applications": false,
   "icons": [
     {
