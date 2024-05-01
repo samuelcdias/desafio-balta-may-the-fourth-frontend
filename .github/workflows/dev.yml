@@ -34,7 +34,7 @@ jobs:
         run: dotnet workload install wasm-tools
       
       - name: Restore Dependencies
-        run: ls -la && cd StartWar && dotnet restore
+        run: ls -la && cd StarWar && dotnet restore
       
       - name: Build
         run: dotnet build -c:Release --no-restore
