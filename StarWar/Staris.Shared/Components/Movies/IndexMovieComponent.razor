@@ -7,24 +7,29 @@
 {
     <h1 class="sr-only">Lista de Filmes</h1>
 
-     @if (IsDone)
-     {
-         <section class="page">
+    @if (IsDone)
+    {
+        <section class="page">
             <div class="cards-wrapper">
-        
-                @foreach(var item in Model)
+                @foreach (var item in Model)
                 {
                     <Movie Item="@item" />
                 }
             </div>
-                <PaginationComponent TotalPages="@TotalPages" />
+            <PaginationComponent TotalPages="@TotalPages" />
         </section>
-     }
-     else
-     {
+    }
+    else
+    {
         <div>
             ...Carregando
         </div>
-     }
+    }
+}
+else
+{
+    <div>
+        ...Carregando
+    </div>
 }
 
