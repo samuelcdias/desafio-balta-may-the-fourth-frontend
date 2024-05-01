@@ -2,7 +2,6 @@
   "name": "Suprimentos Táticos e Recursos do Império",
   "short_name": "StarIs",
   "id": "./",
-  "start_url": "./",
   "display": "standalone",
   "theme_color": "#ffcf00",
   "background_color": "#1e1e1e",

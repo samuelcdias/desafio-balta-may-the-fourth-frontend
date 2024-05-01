@@ -31,9 +31,12 @@ header .title-header {
     }
 
 @media all and (max-width: 992px){
+    main{
+        flex-direction: column;
+    }
     .sidebar {
-        display: none;
         position: relative;
+        margin: 12px;
     }
     .content {
         padding: 0;
