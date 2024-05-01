@@ -18,7 +18,11 @@ body {
 .content {
     width: 100%;
 }
-
+@media (max-width: 992px){
+    .content h1{
+        margin-left: max(1vw,16px);
+    }
+}
 .page {
     width: 100%;
     display: flex;
