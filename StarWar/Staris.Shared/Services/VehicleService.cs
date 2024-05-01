@@ -17,29 +17,29 @@ public class VehicleService : IVehicleService
         _endPoint = "vehicles/";
     }
 
-    public async Task<List<VehicleViewModel>> GetList()
+    public async Task<ResultViewModel<VehicleViewModel>> GetList()
     {
         var resultBase = await _client.GetFromJsonAsync<ResultViewModel<VehicleViewModel>>(_endPoint);
-        return resultBase?.Results ?? [];
+        return resultBase ?? new ResultViewModel<VehicleViewModel>();
 
     }
-    public async Task<List<VehicleViewModel>> GetList(int page, int perPage)
+    public async Task<ResultViewModel<VehicleViewModel>> GetList(int page, int perPage)
     {
         string parameters = AppConfig.BuildPostParameters("", page, perPage, "", "");
         var resultBase = await _client.GetFromJsonAsync<ResultViewModel<VehicleViewModel>>(_endPoint + parameters);
-        return resultBase?.Results ?? [];
+        return resultBase ?? new ResultViewModel<VehicleViewModel>();
     }
-    public async Task<List<VehicleViewModel>> GetList(string search, int page, int perPage)
+    public async Task<ResultViewModel<VehicleViewModel>> GetList(string search, int page, int perPage)
     {
         string parameters = AppConfig.BuildPostParameters(search, page, perPage, "", "");
         var resultBase = await _client.GetFromJsonAsync<ResultViewModel<VehicleViewModel>>(_endPoint + parameters);
-        return resultBase?.Results ?? [];
+        return resultBase ?? new ResultViewModel<VehicleViewModel>();
     }
-    public async Task<List<VehicleViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder)
+    public async Task<ResultViewModel<VehicleViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder)
     {
         string parameters = AppConfig.BuildPostParameters(search, page, perPage, sortBy, sortOrder);
         var resultBase = await _client.GetFromJsonAsync<ResultViewModel<VehicleViewModel>>(_endPoint + parameters);
-        return resultBase?.Results ?? [];
+        return resultBase ?? new ResultViewModel<VehicleViewModel>();
     }
     
     public async Task<VehicleViewModel> GetById(int id)

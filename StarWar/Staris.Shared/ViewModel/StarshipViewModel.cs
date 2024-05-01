@@ -5,7 +5,7 @@ namespace Staris.Shared.ViewModel;
 public class StarshipViewModel : ViewModelBase
 {
     public string? Name { get; set; }
-    public string? Model { get; set; }
+    public string? Model { get; set; } = string.Empty;
     public string? Manufacturer { get; set; }
 
     [JsonPropertyName("costInCredits")]

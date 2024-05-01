@@ -11,24 +11,10 @@
         <div class="cards-wrapper">
             @foreach (var v in Model)
             {
-                <BodyFragment>
-                    <img src="@(RemoverSubstring(v.ImageUrl))" alt="@v.Name" />
-                </BodyFragment>
-                <FooterFragment>
-                    <h2 class="title">@v.Name</h2>
-                    <p class="description">Modelo: @v.Model</p>
-                    <p class="description" title="Quantidade necessária de tripulantes para a nave">Tripulantes: @v.Crew</p>
-                    <p class="description">Custo em Crdt: @v.CostInCredits</p>
-                    <p class="description">Fabricante: @v.Manufacturer</p>
-                    @* <p class="description" title="O número máximo de Megalights que esta nave pode viajar">MGLT:
-            @v.Manufacturer
-            </p>
-            <p class="description" title="Velocidade máxima na atmosfera">Vel. Máx: @v.MaxSpeedAtmosphering</p>
-            *@
-                </FooterFragment>
-
+                <VehiclesComponent Item="@v" />
             }
         </div>
+        <PaginationComponent TotalPages="@TotalPages" />
     </section>
 
 

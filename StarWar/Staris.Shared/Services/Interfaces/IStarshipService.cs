@@ -8,10 +8,10 @@ public interface IStarshipService
     /// Retorna Lista de Naves
     /// </summary>
     /// <returns></returns>
-    public Task<List<StarshipViewModel>> GetList();
-    public Task<List<StarshipViewModel>> GetList(int page, int perPage);
-    public Task<List<StarshipViewModel>> GetList(string search, int page, int perPage);
-    public Task<List<StarshipViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder);
+    public Task<ResultViewModel<StarshipViewModel>> GetList();
+    public Task<ResultViewModel<StarshipViewModel>> GetList(int page, int perPage);
+    public Task<ResultViewModel<StarshipViewModel>> GetList(string search, int page, int perPage);
+    public Task<ResultViewModel<StarshipViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder);
 
     /// <summary>
     /// Retorna Nave pelo ID

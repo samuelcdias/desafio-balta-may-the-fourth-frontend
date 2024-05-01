@@ -17,28 +17,28 @@ public class PlanetService : IPlanetService
         _endPoint = "planets/";
     }
 
-    public async Task<List<PlanetViewModel>> GetList()
+    public async Task<ResultViewModel<PlanetViewModel>> GetList()
     {
         var ResultBase = await _client.GetFromJsonAsync<ResultViewModel<PlanetViewModel>>(_endPoint);
-        return ResultBase?.Results ?? [];
+        return ResultBase ?? new ResultViewModel<PlanetViewModel>();
     }
-    public async Task<List<PlanetViewModel>> GetList(int page, int perPage)
+    public async Task<ResultViewModel<PlanetViewModel>> GetList(int page, int perPage)
     {
         string parameters = AppConfig.BuildPostParameters("", page, perPage, "", "");
         var ResultBase = await _client.GetFromJsonAsync<ResultViewModel<PlanetViewModel>>(_endPoint + parameters);
-        return ResultBase?.Results ?? [];
+        return ResultBase ?? new ResultViewModel<PlanetViewModel>();
     }
-    public async Task<List<PlanetViewModel>> GetList(string search, int page, int perPage)
+    public async Task<ResultViewModel<PlanetViewModel>> GetList(string search, int page, int perPage)
     {
         string parameters = AppConfig.BuildPostParameters(search, page, perPage, "", "");
         var ResultBase = await _client.GetFromJsonAsync<ResultViewModel<PlanetViewModel>>(_endPoint + parameters);
-        return ResultBase?.Results ?? [];
+        return ResultBase ?? new ResultViewModel<PlanetViewModel>();
     }
-    public async Task<List<PlanetViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder)
+    public async Task<ResultViewModel<PlanetViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder)
     {
         string parameters = AppConfig.BuildPostParameters(search, page, perPage, sortBy, sortOrder);
         var ResultBase = await _client.GetFromJsonAsync<ResultViewModel<PlanetViewModel>>(_endPoint + parameters);
-        return ResultBase?.Results ?? [];
+        return ResultBase ?? new ResultViewModel<PlanetViewModel>();
     }
 
     public async Task<PlanetViewModel> GetById(int Id)

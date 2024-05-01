@@ -2,7 +2,8 @@
 	grid: 586px / repeat(3,310px);
 }
 /* breakpoint based on size of card */
-@media screen and (max-width: 1050px){
+/* calc => (--width + 32px)*3 - 32px + 205px + 2 * 48px **/
+@media screen and (max-width: 1295px){
 	.cards-wrapper {
 		grid: 586px / repeat(2,310px);
 		padding: 36px 12px;

@@ -1,8 +1,6 @@
 ﻿
-.card-film {
+.card-modified {
     background: var(--black);
-    width: 310px;
-    height: 586px;
     border-radius: 8px;
     box-shadow: 0 0 65px -30px #ffffff4d;
     padding: 16px;
@@ -11,8 +9,8 @@
     flex-direction: column;
 }
 
-    .card-film:focus,
-    .card-film:hover {
+    .card-modified:focus,
+    .card-modified:hover {
         box-shadow: 0 0 0 .15rem rgba(255,207,0,.25);
     }
 

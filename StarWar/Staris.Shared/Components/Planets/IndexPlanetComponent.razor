@@ -3,7 +3,7 @@
 @inherits IndexPlanet
 <PageTitle>Planetas</PageTitle>
 
-<h1>Lista de Planetas</h1>
+<h1>Planetas</h1>
 
 @if (Model is not null)
 {
@@ -11,20 +11,10 @@
         <div class="cards-wrapper">
             @foreach (var m in Model)
             {
-                <CardComponent  >
-                    <BodyFragment>
-                        <img src="@(RemoverSubstring(m.ImageUrl))" alt="@m.Name" />
-                    </BodyFragment>
-                    <FooterFragment>
-                        <h2 class="title">@m.Name</h2>
-                        <p class="description">Clima: @m.Climate</p>
-                        <p class="description">População: @m.Population</p>
-                        <p class="description">Diametro: @m.Diameter</p>
-                        <p class="description" title="Quantidade de dias para para o planeta realizar uma volta completa.">Periodo Orbitral: @m.OrbitalPeriod</p>
-                    </FooterFragment>
-                </CardComponent>
+               <PlanetComponent Item="@m" />
             }
         </div>
+        <PaginationComponent TotalPages="@TotalPages" ImageAsset="assets/not-found-planet.png"/>
     </section>
 
 }

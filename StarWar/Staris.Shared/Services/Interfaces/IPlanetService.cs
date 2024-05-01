@@ -8,10 +8,10 @@ public interface IPlanetService
     /// Retorna Lista de Planetas
     /// </summary>
     /// <returns></returns>
-    public Task<List<PlanetViewModel>> GetList();
-    public Task<List<PlanetViewModel>> GetList(int page, int perPage);
-    public Task<List<PlanetViewModel>> GetList(string search, int page, int perPage);
-    public Task<List<PlanetViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder);
+    public Task<ResultViewModel<PlanetViewModel>> GetList();
+    public Task<ResultViewModel<PlanetViewModel>> GetList(int page, int perPage);
+    public Task<ResultViewModel<PlanetViewModel>> GetList(string search, int page, int perPage);
+    public Task<ResultViewModel<PlanetViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder);
     /// <summary>
     /// <summary>
     /// Retorna Planeta pelo Id

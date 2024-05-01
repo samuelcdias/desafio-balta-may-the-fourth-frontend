@@ -12,18 +12,10 @@
         <div class="cards-wrapper">
             @foreach (var p in Model)
             {
-                <BodyFragment>
-                    <img src="@(RemoverSubstring(p.ImageUrl))" alt="@p.Name" />
-                </BodyFragment>
-                <FooterFragment>
-                    <h2 class="title">@p.Name</h2>
-                    <p class="description">Gênero: @p.Gender</p>
-                    <p class="description">Ano Nascimento: @p.BirthYear</p>
-                    <p class="description">Olhos: @p.EyeColor</p>
-                    <p class="description">Cabelo: @p.HairColor</p>
-                </FooterFragment>
+                <PeopleComponent Item="@p" />
             }
         </div>
+        <PaginationComponent TotalPages="@TotalPages" />
     </section>
 }
 else

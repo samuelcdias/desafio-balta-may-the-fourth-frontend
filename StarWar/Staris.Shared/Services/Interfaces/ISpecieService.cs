@@ -8,10 +8,10 @@ public interface ISpecieService
     /// Retorna Lista de Espécies
     /// </summary>
     /// <returns></returns>
-    public Task<List<SpecieViewModel>> GetList();
-    public Task<List<SpecieViewModel>> GetList(int page, int perPage);
-    public Task<List<SpecieViewModel>> GetList(string search, int page, int perPage);
-    public Task<List<SpecieViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder);
+    public Task<ResultViewModel<SpecieViewModel>> GetList();
+    public Task<ResultViewModel<SpecieViewModel>> GetList(int page, int perPage);
+    public Task<ResultViewModel<SpecieViewModel>> GetList(string search, int page, int perPage);
+    public Task<ResultViewModel<SpecieViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder);
     /// <summary>
     /// Retorna Specie pelo Id
     /// </summary>
