@@ -13,34 +13,31 @@ public class PeopleService : IPeopleService
     {
         _client = client;
         _client.BaseAddress = new Uri(AppConfig.BaseUri);
-        //_client = httpClientFactory.CreateClient(Configuration.HttpClientName);
-
-        //_endpoint = "people/";
         _endpoint = "characters/";
        
     }
-    public async Task<List<CharacterViewModel>> GetList()
+    public async Task<ResultViewModel<CharacterViewModel>> GetList()
     {
         var peoples = await _client.GetFromJsonAsync<ResultViewModel<CharacterViewModel>>(_endpoint);
-        return peoples?.Results ?? [];
+        return peoples ?? new ResultViewModel<CharacterViewModel>();
     }
-    public async Task<List<CharacterViewModel>> GetList(int page, int perPage)
+    public async Task<ResultViewModel<CharacterViewModel>> GetList(int page, int perPage)
     {
         string parameters = AppConfig.BuildPostParameters("", page, perPage,"","");
         var peoples = await _client.GetFromJsonAsync<ResultViewModel<CharacterViewModel>>(_endpoint + parameters);
-        return peoples?.Results ?? [];
+        return peoples ?? new ResultViewModel<CharacterViewModel>();
     }
-    public async Task<List<CharacterViewModel>> GetList(string search, int page, int perPage)
+    public async Task<ResultViewModel<CharacterViewModel>> GetList(string search, int page, int perPage)
     {
         string parameters = AppConfig.BuildPostParameters(search, page, perPage, "","");
         var peoples = await _client.GetFromJsonAsync<ResultViewModel<CharacterViewModel>>(_endpoint + parameters);
-        return peoples?.Results ?? [];
+        return peoples ?? new ResultViewModel<CharacterViewModel>();
     }
-    public async Task<List<CharacterViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder)
+    public async Task<ResultViewModel<CharacterViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder)
     {
         string parameters = AppConfig.BuildPostParameters(search, page, perPage, sortBy, sortOrder);
         var peoples = await _client.GetFromJsonAsync<ResultViewModel<CharacterViewModel>>(_endpoint + parameters);
-        return peoples?.Results ?? [];
+        return peoples ?? new ResultViewModel<CharacterViewModel>();
     }
 
     public async Task<CharacterViewModel> GetById(int Id)

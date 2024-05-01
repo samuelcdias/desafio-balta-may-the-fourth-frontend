@@ -8,8 +8,6 @@ public class IndexMovie: ComponentBaseGeneric<List<MovieViewModel>>
 {
     [Inject]
     public IMovieService _service { get; set; } = null!;
-    [Inject]
-    public NavigationManager _navigationManager { get; set; } = default!;
     [Parameter]
     [SupplyParameterFromQuery]
     public int Page { get; set; } = 1;

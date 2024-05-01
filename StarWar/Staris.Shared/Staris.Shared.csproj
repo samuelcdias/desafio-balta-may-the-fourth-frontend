@@ -7,11 +7,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Components\People\IndexPeopleComponent.razor.css" />
+    <None Remove="Components\Planets\IndexPlanetComponent.razor.css" />
     <None Remove="Components\Shared\CardComponent.razor.css" />
+    <None Remove="Components\Shared\ListItemsComponent.razor.css" />
+    <None Remove="Components\Shared\ListItemsComponent.razor.css~RF1713adc8.TMP" />
+    <None Remove="Components\Starship\IndexStarshipComponent.razor.css" />
+    <None Remove="Components\Vehicles\IndexVehicleComponent.razor.css" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Components\People\IndexPeopleComponent.razor.css" />
+    <Content Include="Components\Planets\IndexPlanetComponent.razor.css" />
     <Content Include="Components\Shared\CardComponent.razor.css" />
+    <Content Include="Components\Shared\ListItemsComponent.razor.css" />
+    <Content Include="Components\Starship\IndexStarshipComponent.razor.css" />
+    <Content Include="Components\Vehicles\IndexVehicleComponent.razor.css" />
   </ItemGroup>
 
 

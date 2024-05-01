@@ -1,0 +1,24 @@
+﻿.cards-wrapper {
+	--width: 392px;
+	--imgHeight: 286px;
+	--height: 596px;
+	padding: 36px 12px;
+	grid: var(--height) / repeat(3,var(--width));
+}
+/* breakpoint based on size of card */
+/* calc => (--width + 32px)*3 - 32px + 205px + 2 * 12px **/
+@media screen and (max-width: 1469px) {
+	.cards-wrapper {
+		grid: var(--height) / repeat(2,var(--width));
+		padding: 36px 12px;
+		max-width: 100%;
+	}
+}
+/* calc => (--width + 32px)*2 - 32px + 2 * 12px **/
+@media screen and (max-width: 840px) {
+	.cards-wrapper {
+		grid: var(--height) / repeat(1,var(--width));
+		padding: 24px 12px;
+		max-width: 100%;
+	}
+}

@@ -28,31 +28,87 @@ body {
 
 .cards-wrapper {
     display: grid;
-    grid: 586px / repeat(3, 310px);
     padding: 24px 48px;
     gap: 32px;
     max-width: calc(100vw - 205px);
 }
 
-.card-wrapper {
-    grid: 586px / repeat(3, 310px);
+body::-webkit-scrollbar {
+    width: 6px; 
 }
 
-/* breakpoint based on size of card */
-@media screen and (max-width: 1050px) {
-    .cards-wrapper {
-        grid: 586px / repeat(2, 310px);
-        padding: 36px 12px;
-        max-width: 100%;
-    }
+body::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.15); 
 }
 
-@media screen and (max-width: 708px) {
-    .cards-wrapper {
-        grid: 586px / repeat(1, 310px);
-        padding: 24px 12px;
-        max-width: 100%;
+body::-webkit-scrollbar-thumb {
+    background-color: var(--star); 
+    border-radius: 20px; 
+}
+
+.card-modified {
+    background: var(--black);
+    width: var(--width);
+    height: var(--height);
+    border-radius: 8px;
+    box-shadow: 0 0 65px -30px #ffffff4d;
+    padding: 16px;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-film:focus,
+.card-film:hover {
+    box-shadow: 0 0 0 .15rem rgba(255,207,0,.25);
+}
+
+
+.card-modified .image-wrapper {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+    .card-modified .image-wrapper img {
+        width: calc(var(--width) - 32px);
+        height: var(--imgHeight);
+        object-fit: contain;
     }
+
+    .card-modified .image-wrapper .overlay-effect {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        opacity: 40%;
+        mix-blend-mode: overlay;
+    }
+
+.card-modified .description-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 10px;
+}
+
+.card-modified h2.title {
+    color: var(--star);
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    min-height: 58px;
+    text-decoration: none;
+}
+
+.card-modified .description {
+    margin: 0;
+    color: var(--white);
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
 }
 
 h1:focus {
@@ -62,6 +118,7 @@ h1:focus {
 a,
 .btn-link {
     color: #0071c1;
+    text-decoration: none !important;
 }
 
 .btn-primary {

@@ -1,9 +1,9 @@
-﻿    <section class="card-film" >
+﻿<a href="@NavTo" class="link">
+    <section class="card-modified" style="width: @Width; height: @Height">
         @if (BodyFragment is not null)
         {
             <div class="image-wrapper">
                 <span class="overlay-effect"></span>
-                <span class="lighten-effect"></span>
                 @BodyFragment
             </div>
         }
@@ -14,7 +14,7 @@
             </div>
         }
     </section>
-
+</a>
 
 @code {
     [Parameter]
@@ -31,6 +31,12 @@
         }
         set { Height = value; }
     }
-
-
+    [Parameter]
+    public string? Width {
+        get 
+        {
+            return Height += Height.EndsWith("px") ? "" : "px";
+        }
+        set { Height = value; }
+    }
 }

@@ -1,0 +1,27 @@
+﻿.card-planet{
+	background: var(--black);
+	width: 310px;
+	border-radius: 8px;
+	box-shadow: 0 0 65px -30px #ffffff4d;
+}
+
+.image-wrapper{
+	position: relative;
+}
+
+	.image-wrapper .overlay-effect{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+		opacity: 40%;
+		mix-blend-mode: overlay;
+	}
+
+h2.title{
+	color: var(--star);
+	font-weight: 400;
+	font-size: 24px;
+}

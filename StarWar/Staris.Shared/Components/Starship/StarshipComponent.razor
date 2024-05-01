@@ -1,0 +1,20 @@
+﻿@using Staris.Shared.Components.Code.Shared
+@inherits ItemCode<StarshipViewModel>
+
+<a href="/starships/@Item.Id" class="link">
+    <section class="card-modified">
+        <div class="image-wrapper">
+            <span class="overlay-effect"></span>
+            <img src="@GetImage()" alt="@Item.Name" loading="eager" />
+        </div>
+        <div class="description-wrapper">
+            <h2 class="title">@Item.Name</h2>
+            <p class="description">Modelo: @Item.Model</p>
+            <p class="description" title="Quantidade necessária de tripulantes para a nave">Tripulantes: @Item.Crew</p>
+            <p class="description">Custo em Crdt: @Item.CostInCredits</p>
+            <p class="description">Fabricante: @Item.Manufacturer</p>
+            <p class="description" title="O número máximo de Megalights que esta nave pode viajar">MGLT: @Item.Mglt</p>
+            <p class="description" title="Velocidade máxima na atmosfera">Vel. Máx: @Item.MaxSpeedAtmosphering</p>
+        </div>
+    </section>
+</a>

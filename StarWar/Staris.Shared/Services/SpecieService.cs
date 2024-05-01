@@ -17,28 +17,28 @@ public class SpecieService : ISpecieService
         _endPoint = "species";
     }
 
-    public async Task<List<SpecieViewModel>> GetList()
+    public async Task<ResultViewModel<SpecieViewModel>> GetList()
     {
         var resultBase = await _client.GetFromJsonAsync<ResultViewModel<SpecieViewModel>>(_endPoint);
-        return resultBase?.Results ?? [];
+        return resultBase ?? new ResultViewModel<SpecieViewModel>();
     }
-    public async Task<List<SpecieViewModel>> GetList(int page, int perPage)
+    public async Task<ResultViewModel<SpecieViewModel>> GetList(int page, int perPage)
     {
         string parameters = AppConfig.BuildPostParameters("", page, perPage,"","");
         var resultBase = await _client.GetFromJsonAsync<ResultViewModel<SpecieViewModel>>(_endPoint + parameters);
-        return resultBase?.Results ?? [];
+        return resultBase ?? new ResultViewModel<SpecieViewModel>();
     }
-    public async Task<List<SpecieViewModel>> GetList(string search, int page, int perPage)
+    public async Task<ResultViewModel<SpecieViewModel>> GetList(string search, int page, int perPage)
     {
         string parameters = AppConfig.BuildPostParameters(search, page, perPage,"","");
         var resultBase = await _client.GetFromJsonAsync<ResultViewModel<SpecieViewModel>>(_endPoint + parameters);
-        return resultBase?.Results ?? [];
+        return resultBase ?? new ResultViewModel<SpecieViewModel>();
     }
-    public async Task<List<SpecieViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder)
+    public async Task<ResultViewModel<SpecieViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder)
     {
         string parameters = AppConfig.BuildPostParameters(search, page, perPage, sortBy, sortOrder);
         var resultBase = await _client.GetFromJsonAsync<ResultViewModel<SpecieViewModel>>(_endPoint + parameters);
-        return resultBase?.Results ?? [];
+        return resultBase ?? new ResultViewModel<SpecieViewModel>();
     }
 
     public async Task<SpecieViewModel> GetById(int Id)

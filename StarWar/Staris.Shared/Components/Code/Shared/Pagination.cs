@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Staris.Shared.Components.Code.Shared
 {
-    public class Pagination :ComponentBase
+    public class Pagination : ComponentBase
     {
         [Inject]
         public NavigationManager _navigationManager { get; set; } = default!;

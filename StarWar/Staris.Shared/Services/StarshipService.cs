@@ -16,28 +16,28 @@ public class StarshipService : IStarshipService
         _client.BaseAddress = new Uri(AppConfig.BaseUri);
         _endPoint = "starships/";
     }
-    public async Task<List<StarshipViewModel>> GetList()
+    public async Task<ResultViewModel<StarshipViewModel>> GetList()
     {
         var starShips = await _client.GetFromJsonAsync<ResultViewModel<StarshipViewModel>>(_endPoint);
-        return starShips?.Results ?? [];
+        return starShips ?? new ResultViewModel<StarshipViewModel>();
     }
-    public async Task<List<StarshipViewModel>> GetList(int page, int perPage)
+    public async Task<ResultViewModel<StarshipViewModel>> GetList(int page, int perPage)
     {
         string parameters = AppConfig.BuildPostParameters("", page, perPage, "","");
         var starShips = await _client.GetFromJsonAsync<ResultViewModel<StarshipViewModel>>(_endPoint + parameters);
-        return starShips?.Results ?? [];
+        return starShips ?? new ResultViewModel<StarshipViewModel>();
     }
-    public async Task<List<StarshipViewModel>> GetList(string search, int page, int perPage)
+    public async Task<ResultViewModel<StarshipViewModel>> GetList(string search, int page, int perPage)
     {
         string parameters = AppConfig.BuildPostParameters(search, page, perPage, "", "");
         var starShips = await _client.GetFromJsonAsync<ResultViewModel<StarshipViewModel>>(_endPoint + parameters);
-        return starShips?.Results ?? [];
+        return starShips ?? new ResultViewModel<StarshipViewModel>();
     }
-    public async Task<List<StarshipViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder)
+    public async Task<ResultViewModel<StarshipViewModel>> GetList(string search, int page, int perPage, string sortBy, string sortOrder)
     {
         string parameters = AppConfig.BuildPostParameters(search, page, perPage, sortBy, sortOrder);
         var starShips = await _client.GetFromJsonAsync<ResultViewModel<StarshipViewModel>>(_endPoint + parameters);
-        return starShips?.Results ?? [];
+        return starShips ?? new ResultViewModel<StarshipViewModel>();
     }
 
     public async Task<StarshipViewModel> GetById(int Id)
